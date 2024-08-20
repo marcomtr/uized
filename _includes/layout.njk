@@ -9,12 +9,15 @@ title: Aspect Ratio Calculator Tool
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,shrink-to-fit=no">
         <meta name="description" content="">
         <title>{{ title }}</title>
-        <link rel="stylesheet" href="{{ '/style.out.css' | url }}" />
+        <link rel="stylesheet" href="{{ 'style.out.css' | url }}" />
 
     </head>
     <body class="bg-zinc-200 text-zinc-900">
 
         {% include "header.njk" %}
+
+        {{ "/test/" | htmlBaseUrl }}
+
 
         <main class="flex flex-wrap">
             <aside class="hidden md:block w-64 bg-zinc-900 p-2 text-zinc-400">
