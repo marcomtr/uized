@@ -1,0 +1,26 @@
+---
+title: Home
+---
+
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,shrink-to-fit=no">
+        <meta name="description" content="">
+        <title>{{ title }}</title>
+        <link href="/style.out.css" rel="stylesheet" />
+    </head>
+    <body class="bg-zinc-200 text-zinc-900 flex flex-col h-full">
+
+        {% include "header.njk" %}
+
+        <main class="flex-1">
+            {{ content | safe }}
+        </main>
+
+        {% include "footer.njk" %}
+
+
+    </body>
+</html>
