@@ -664,40 +664,8 @@ video {
   display: none;
 }
 
-.aspect-\[\/\] {
-  aspect-ratio: /;
-}
-
-.aspect-\[1\.91\/1\] {
-  aspect-ratio: 1.91/1;
-}
-
-.aspect-\[16\/9\] {
-  aspect-ratio: 16/9;
-}
-
-.aspect-\[2\.39\/1\] {
-  aspect-ratio: 2.39/1;
-}
-
 .aspect-\[21\/9\] {
   aspect-ratio: 21/9;
-}
-
-.aspect-\[3\/2\] {
-  aspect-ratio: 3/2;
-}
-
-.aspect-\[4\/3\] {
-  aspect-ratio: 4/3;
-}
-
-.aspect-\[4\/5\] {
-  aspect-ratio: 4/5;
-}
-
-.aspect-\[9\/16\] {
-  aspect-ratio: 9/16;
 }
 
 .aspect-square {

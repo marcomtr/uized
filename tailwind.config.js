@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.{html,njk}"],
+  content: [
+    './aspect-ratio-calculator/*.njk',
+    './_includes/*.njk',
+    './js/*.js}',
+    './index.njk',
+  ],
+
   theme: {
     extend: {
       aspectRatio: {
