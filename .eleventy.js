@@ -8,6 +8,13 @@ module.exports = function (eleventyConfig) {
         "js/aspect-ratio-calculator.js"
     );
 
+    return {
+        dir: {
+          input: "src",
+          output: "docs",
+        }
+      };
+    
       
 };
   
