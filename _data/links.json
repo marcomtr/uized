@@ -1,0 +1,18 @@
+{
+    "links": [
+      { "title": "HD Video 16:9", "slug": "hd-video-16-9" },
+      { "title": "4:3", "slug": "4-3" },
+      { "title": "21:9", "slug": "21-9" },
+      { "title": "3:2", "slug": "3-2" },
+      { "title": "2.35:1", "slug": "2-35-1" },
+      { "title": "9:16", "slug": "9-16" },
+      { "title": "Custom", "slug": "custom" },
+      { "title": "YouTube 16:9", "slug": "youtube-16-9" },
+      { "title": "YouTube Shorts 9:16", "slug": "youtube-shorts-9-16" },
+      { "title": "Instagram Post 1:1", "slug": "instagram-post-1-1" },
+      { "title": "Instagram Post 4:5", "slug": "instagram-post-4-5" },
+      { "title": "Instagram Landscape 1.91:1", "slug": "instagram-landscape-1-91-1" },
+      { "title": "Facebook Square 1:1", "slug": "facebook-square-1-1" }
+    ]
+  }
+  
