@@ -1,7 +1,7 @@
 {
     "scripts": {
         "dev:tailwind": "tailwindcss -i style.css -o ./docs/style.out.css --watch",
-        "build-ghpages": "npx @11ty/eleventy --pathprefix=uized"
+        "build-ghpages": "npx @11ty/eleventy --pathprefix=/uized/"
     },
     "devDependencies": {
         "@11ty/eleventy": "^2.0.1",
@@ -9,9 +9,7 @@
         "ghpages": "^0.0.10",
         "npm-run-all": "^4.1.5",
         "postcss": "^8.4.41",
-        "tailwindcss": "^3.4.10"
-    },
-    "dependencies": {
+        "tailwindcss": "^3.4.10",
         "@11ty/eleventy-navigation": "^0.3.5"
     }
 }
