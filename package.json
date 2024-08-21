@@ -1,7 +1,7 @@
 {
     "scripts": {
         "dev:tailwind": "tailwindcss -i style.css -o ./docs/style.out.css --watch",
-        "build-ghpages": "npx @11ty/eleventy"
+        "build-ghpages": "npx @11ty/eleventy --pathprefix uized"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.20",
