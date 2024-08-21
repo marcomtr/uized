@@ -23,6 +23,11 @@ title: Aspect Ratio Calculator
         <main class="flex flex-wrap">
             <aside class="hidden md:block w-64 bg-zinc-900 p-2 text-zinc-400">
 
+            <div class="bg-red-600 py-2">
+
+            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+
+            </div>
                 <ul class="text-sm">
                     {% for post in collections.post  %}
                         {% if post.data.title != "About" %}

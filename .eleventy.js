@@ -1,6 +1,7 @@
 // .eleventy.js
 
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
@@ -12,6 +13,7 @@ module.exports = function (eleventyConfig) {
     );
     
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
 
     return {
