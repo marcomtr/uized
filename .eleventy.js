@@ -13,7 +13,6 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-
     return {
         dir: {
           output: "docs",
