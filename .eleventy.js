@@ -1,6 +1,5 @@
 // .eleventy.js
 
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
@@ -12,7 +11,6 @@ module.exports = function (eleventyConfig) {
         "js/aspect-ratio-calculator.js"
     );
     
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
 
