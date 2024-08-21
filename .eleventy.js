@@ -10,14 +10,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy(
         "js/aspect-ratio-calculator.js"
     );
+
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
 
     return {
         dir: {
           output: "docs",
-        },
-        pathPrefix: "uized/",
+        }
       };
     
       
