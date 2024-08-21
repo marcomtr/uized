@@ -17,7 +17,7 @@ module.exports = function (eleventyConfig) {
         dir: {
           output: "docs",
         },
-        pathPrefix: "/uized/",
+        pathPrefix: "/uized/aspect-ratio-calculator",
       };
     
       

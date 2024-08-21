@@ -21,10 +21,11 @@ title: Aspect Ratio Calculator Tool
 
                 <ul class="text-sm">
                     {% for post in collections.post  %}
-                    <li><a href="{{ post.url | htmlBaseUrl }}" class="block px-3 py-2 rounded-lg {% if post.url == page.url %} bg-white/10 text-white{% endif %}">{{ post.data.title }}</a></li>
+                    <li><a href="{{ post.url }}" class="block px-3 py-2 rounded-lg {% if post.url == page.url %} bg-white/10 text-white{% endif %}">{{ post.data.title }}</a></li>
                     {% endfor %}
                 </ul>
             </aside>
+        
 
             <div class="flex-1 max-w-screen-lg mx-auto p-6">
 
