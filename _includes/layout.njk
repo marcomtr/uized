@@ -23,21 +23,14 @@ title: Aspect Ratio Calculator
         <main class="flex flex-wrap">
             <aside class="hidden md:block w-64 bg-zinc-900 p-2 text-zinc-400">
 
-            <div class="bg-red-600 py-2">
-
-            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-
-            </div>
                 <ul class="text-sm">
-                    {% for post in collections.post  %}
-                        {% if post.data.title != "About" %}
-                            <li><a href="{{ post.url }}" class="block px-3 py-2 rounded-lg {% if post.url == page.url %} bg-white/10 text-white{% endif %}">{{ post.data.title }}</a></li>
-                        {% endif %}
-                    {% endfor %}
+                {%- for entry in collections.all | eleventyNavigation %}
+                    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} class="block px-3 py-2 rounded-lg {% if entry.url == page.url %}bg-white/10 text-white{% endif %}">{{ entry.title }}</a></li>
+                {%- endfor %}
                 </ul>
+
             </aside>
         
-
             <div class="flex-1 max-w-screen-lg mx-auto p-6">
 
                 <div class="flex justify-between justify-center">
