@@ -18,15 +18,26 @@ title: My Rad Blog
     </head>
     <body class="bg-white text-zinc-900">
 
-        {% set tool = true %} 
+           {% set tool = true %} 
         {% include "header.njk" %}
 
-        <main class="max-w-4xl mx-auto p-6">
+        <main class="flex flex-wrap">
+            <aside class="hidden md:block w-64 bg-zinc-900 p-2 text-zinc-400">
+
+                <ul class="text-sm">
+                {%- for entry in collections.all | eleventyNavigation %}
+                    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} class="block px-3 py-2 rounded-lg {% if entry.url == page.url %}bg-white/10 text-white{% endif %}">{{ entry.title }}</a></li>
+                {%- endfor %}
+                </ul>
+
+            </aside>
+        
+            <div class="flex-1 max-w-screen-lg mx-auto p-6">
             {{ content | safe }}
+            </div>
         </main>
 
         {% include "footer.njk" %}
-
 
     </body>
 </html>

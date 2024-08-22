@@ -152,6 +152,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    function toggleMenu() {
+        var menu = document.querySelector('.js-menu');
+        var overlay = document.querySelector('.js-overlay');
+        menu.classList.toggle('-translate-x-full');
+        menu.classList.toggle('opacity-0');
+        overlay.classList.toggle('hidden');
+    }
+    
+    document.querySelector('.js-menu-toggle').addEventListener('click', toggleMenu);
+    document.querySelector('.js-menu-toggle-close').addEventListener('click', toggleMenu);
+    
+
     // Delay the display of the image placeholder by 1 second
     setTimeout(function() {
         document.getElementById('image-placeholder').classList.remove('opacity-0');
