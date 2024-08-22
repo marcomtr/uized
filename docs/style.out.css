@@ -1406,6 +1406,12 @@ video {
   opacity: 1;
 }
 
+@media (min-width: 640px) {
+  .sm\:w-64 {
+    width: 16rem;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:relative {
     position: relative;
@@ -1447,6 +1453,10 @@ video {
     width: 3.5rem;
   }
 
+  .md\:w-64 {
+    width: 16rem;
+  }
+
   .md\:flex-1 {
     flex: 1 1 0%;
   }
@@ -1483,6 +1493,11 @@ video {
 
   .md\:pr-0 {
     padding-right: 0px;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:opacity-100 {
