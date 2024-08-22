@@ -158,7 +158,152 @@
                         <img src="https://placehold.co/1024x576/EEE/666.svg?font=open-sans" class="max-w-full max-h-full opacity-0 transition" alt="" id="image-placeholder">
                     </div>
                 
-                    
+                    <div id="template-options" class="bg-white rounded-xl">
+
+                        <div class="border-b border-zinc-200 px-6 py-4">
+
+                            <div class="inline-flex items-center">
+                                <label class="relative flex items-center rounded-full cursor-pointer" htmlFor="checkbox">
+                                    <input type="checkbox" id="has-custom-text" 
+                                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-zinc-300 hover:border-zinc-500 transition-all checked:border-indigo-700 hover:checked:border-transparent checked:bg-indigo-700"
+                                    id="checkbox" />
+                                    <span
+                                    class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+                                            stroke="currentColor" stroke-width="1">
+                                            <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                </label>
+
+                                <label for="has-custom-text" class="ms-2 text-sm font-medium">Custom text</label>
+
+                            </div> 
+
+
+                            <div class="mt-6 hidden" id="custom-text-container">
+                                <label for="custom-text-label" class="block mb-2 text-sm font-medium text-gray-900">Add your custom text</label>
+                                <input type="text" id="custom-text-label" class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" value="Custom text">
+                            </div>
+
+                        </div>
+
+                        <div class="border-b border-zinc-200 px-6 py-4">
+                            
+                            <h3 class="text-sm font-medium mb-2">Font Family</h3>
+
+                            <div class="grid grid-cols-4 gap-3 md:grid-cols-6 lg:grid-cols-10">
+                                <button data-font="lato" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/lato.svg" class="w-4/5 mx-auto">
+                                    <div class="text-xxs">Lato</div>
+                                </button>
+                                <button data-font="lora" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/lora.svg" class="w-4/5 mx-auto">
+                                    <div class="text-xxs">Lora</div>
+                                </button>
+                                <button data-font="montserrat" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/montserrat.svg" class="w-4/5 mx-auto">
+                                    <div class="flex px-1 text-xxs justify-center">
+                                        <div class="truncate">Montserrat</div>
+                                    </div>
+                                </button>
+                                <button data-font="open-sans" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square ring-2 ring-indigo-700 ring-offset-2 hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/open-sans.svg" class="w-4/5 mx-auto">
+                                    <div class="flex px-1 text-xxs justify-center">
+                                        <div class="truncate">Open Sans</div>
+                                    </div>
+                                </button>
+                                <button data-font="oswald" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/oswald.svg" class="w-4/5 mx-auto">
+                                    <div class="flex px-1 text-xxs justify-center">
+                                        <div class="truncate">Oswald</div>
+                                    </div>
+                                </button>
+                                <button data-font="playfair-display" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/playfair-display.svg" class="w-4/5 mx-auto">
+                                    <div class="flex px-1 text-xxs justify-center">
+                                        <div class="truncate">Playflair Display</div>
+                                    </div>
+                                </button>
+                                <button data-font="pt-sans" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/pt-sans.svg" class="w-4/5 mx-auto">
+                                    <div class="flex px-1 text-xxs justify-center">
+                                        <div class="truncate">PT Sans</div>
+                                    </div>
+                                </button>
+                                <button data-font="raleway" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/raleway.svg" class="w-4/5 mx-auto">
+                                    <div class="flex px-1 text-xxs justify-center">
+                                        <div class="truncate">Raleway</div>
+                                    </div>
+                                </button>
+                                <button data-font="roboto" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/roboto.svg" class="w-4/5 mx-auto">
+                                    <div class="flex px-1 text-xxs justify-center">
+                                        <div class="truncate">Roboto</div>
+                                    </div>
+                                </button>
+                                <button data-font="source-sans-pro" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
+                                    <img src="../../assets/images/fonts/source-sans-pro.svg" class="w-4/5 mx-auto">
+                                    <div class="flex px-1 text-xxs justify-center">
+                                        <div class="truncate">Source Sans Pro</div>
+                                    </div>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="border-b border-zinc-200 px-6 py-4">
+
+                            <h3 class="text-sm font-medium mb-2">Text color</h3>
+
+                            <div class="grid grid-cols-6 gap-2 sm:grid-cols-10 md:grid-cols-8 lg:grid-cols-11 gap-2">
+                                <button data-theme="gray-50" data-theme-fg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-100" data-theme-fg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-200" data-theme-fg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"> </button>
+                                <button data-theme="gray-300" data-theme-fg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-400" data-theme-fg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-500" data-theme-fg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-600" data-theme-fg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-700" data-theme-fg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-800" data-theme-fg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3] ring-2 ring-indigo-700 ring-offset-2"></button>
+                                <button data-theme="gray-900" data-theme-fg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-950" data-theme-fg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                            </div>
+
+                        </div>
+
+                        <div class="px-6 py-4">
+
+                            <h3 class="text-sm font-medium mb-2">Background color</h3>
+
+                            <div class="grid grid-cols-6 gap-2 sm:grid-cols-10 md:grid-cols-8 lg:grid-cols-11 gap-2">
+                                <button data-theme="gray-50" data-theme-bg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-100" data-theme-bg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3] ring-2 ring-indigo-700 ring-offset-2"></button>
+                                <button data-theme="gray-200" data-theme-bg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"> </button>
+                                <button data-theme="gray-300" data-theme-bg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-400" data-theme-bg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-500" data-theme-bg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-600" data-theme-bg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-700" data-theme-bg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-800" data-theme-bg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-900" data-theme-bg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                                <button data-theme="gray-950" data-theme-bg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl flex flex-wrap gap-2">
+                        <input type="text" id="copy-link" class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500 flex-1">
+                        <button type="button" id="copy-url-button"  class="text-white bg-indigo-600 hover:bg-indigo-900 focus:ring-2 focus:ring-offset-2  focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm px-5 py-2.5 shadow transition">
+                            Copy url
+                        </button>
+                            
+                    </div>
 
                 </div>
 
