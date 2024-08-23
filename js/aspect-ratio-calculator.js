@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         imagePlaceholder.src = imageUrl;
         updateCopyLinkInput(imageUrl); // Update the copy link input field
+        console.log('test')
 
     };
 
