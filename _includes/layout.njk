@@ -3,7 +3,7 @@ title: Aspect Ratio Calculator
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
@@ -18,312 +18,241 @@ title: Aspect Ratio Calculator
 
         <link rel="stylesheet" href="../../style.out.css" />
         
-
     </head>
-    <body class="bg-zinc-100 text-zinc-900">
+    <body class="bg-zinc-200 text-zinc-900 flex flex-col h-full">
 
-        <div class="fixed top-0 left-0 h-full w-full bg-zinc-900/50 z-40 hidden js-overlay"></div>
+        {% from "components/inputField.njk" import inputField %}
+        {% from "components/checkbox.njk" import checkboxField %}
 
-        {% set tool = true %} 
+        <div class="fixed top-0 left-0 h-full w-full bg-black/30 z-40 hidden js-overlay"></div>
+
         {% include "header.njk" %}
 
-        <main class="flex flex-wrap">
+        <main class="sm:flex flex-wrap justify-between gap-10 gap-5 lg:gap-5 flex-1 p-5 max-w-[90rem] mx-auto w-full">
 
-            <aside class="fixed top-0 h-full md:relative md:h-auto w-64 bg-zinc-900 px-2 text-zinc-400 z-50 md:block transition-all duration-300 -translate-x-full opacity-0 md:opacity-100 md:translate-x-0 js-menu">
+            <aside class="fixed top-0 h-full lg:relative lg:h-auto w-56 lg:w-72 text-zinc-900 z-50 lg:block transition-all duration-300 -translate-x-full opacity-0 lg:opacity-100 lg:translate-x-0 js-menu">
 
-            <div class="flex items-center gap-3 h-[62px] px-3 z-50 md:hidden">
-                <button type="button" class="mr-2 js-menu-toggle-close">
-                    <svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="mask0_165_164" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="41">
-                    <rect x="0.1875" y="0.5625" width="40" height="40" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_165_164)">
-                    <path d="M10.7429 31.8679L8.90961 30.0071L18.3263 20.5625L8.90961 11.1179L10.7429 9.25708L20.1875 18.7012L29.6321 9.25708L31.4654 11.1179L22.0488 20.5625L31.4654 30.0071L29.6321 31.8679L20.1875 22.4237L10.7429 31.8679Z" fill="white"/>
-                    </g>
+
+                <div class="flex items-center gap-3 px-5 h-14 bg-zinc-900 z-50 lg:hidden">
+                    {% set locatedInSidebar = true %} 
+                    {% include "logo.njk" %}
+                </div>
+
+                <button class="flex w-full justify-between items-center bg-white font-bold text-sm py-2.5 px-5 rounded-2xl">
+                    Aspect ratio calculator
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_197_200" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                        <rect width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_197_200)">
+                        <path d="M12 14.95C11.8667 14.95 11.7417 14.9292 11.625 14.8875C11.5083 14.8458 11.4 14.775 11.3 14.675L6.69999 10.075C6.51665 9.89166 6.42082 9.66249 6.41249 9.38749C6.40415 9.11249 6.49999 8.87499 6.69999 8.67499C6.88332 8.49166 7.11665 8.39999 7.39999 8.39999C7.68332 8.39999 7.91665 8.49166 8.09999 8.67499L12 12.55L15.9 8.67499C16.0833 8.49166 16.3125 8.39583 16.5875 8.38749C16.8625 8.37916 17.1 8.47499 17.3 8.67499C17.4833 8.85833 17.575 9.09166 17.575 9.37499C17.575 9.65833 17.4833 9.89166 17.3 10.075L12.7 14.675C12.6 14.775 12.4917 14.8458 12.375 14.8875C12.2583 14.9292 12.1333 14.95 12 14.95Z" fill="black" fill-opacity="0.94"/>
+                        </g>
                     </svg>
+
                 </button>
-                <a href="/" class="text-white">
-                    <svg width="54" height="20" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M-2.33625e-07 0.570189L20.5537 0.570189L20.5537 5.91492L0 5.91492L-2.33625e-07 0.570189Z" fill="currentColor"/>
-                        <path d="M-5.34397e-07 7.20425L13.7363 7.20425C15.2936 7.20425 16.3896 7.25503 17.0244 7.3566C17.6507 7.45816 18.2982 7.75862 18.9668 8.25796C19.627 8.75731 20.1305 9.41747 20.4775 10.2384C20.8161 11.0509 20.9854 12.0115 20.9854 13.1203C20.9854 14.3475 20.7822 15.4308 20.376 16.3703C19.9697 17.3097 19.4408 18.0122 18.7891 18.4777C18.1374 18.9432 17.4518 19.2183 16.7324 19.3029C16.0046 19.3875 14.4811 19.4298 12.1621 19.4298L0 19.4298L-2.33625e-07 14.0851L15.4121 14.0851C16.3092 14.0851 16.8848 14.0386 17.1387 13.9455C17.3841 13.8439 17.5068 13.645 17.5068 13.3488C17.5068 13.0102 17.3714 12.7944 17.1006 12.7013C16.8213 12.5998 16.1696 12.549 15.1455 12.549L-3.00772e-07 12.549L-5.34397e-07 7.20425Z" fill="currentColor"/>
-                        <path d="M30.2197 0.527344V4.32422L26.54 15.7031H30.2197V19.5H21.126V16.7461L24.9229 4.32422H21.5713V0.527344H30.2197ZM31.2688 0.527344H39.4954V4.32422H36.2024V7.92188H39.2844V11.5312H36.2024V15.7031H39.8235V19.5H31.2688V0.527344ZM41.0132 0.527344H44.7046C47.0874 0.527344 48.6968 0.636719 49.5327 0.855469C50.3764 1.07422 51.0171 1.43359 51.4546 1.93359C51.8921 2.43359 52.1655 2.99219 52.2749 3.60938C52.3843 4.21875 52.4389 5.42188 52.4389 7.21875V13.8633C52.4389 15.5664 52.3569 16.707 52.1929 17.2852C52.0366 17.8555 51.7593 18.3047 51.3608 18.6328C50.9624 18.9531 50.4702 19.1797 49.8843 19.3125C49.2983 19.4375 48.4155 19.5 47.2358 19.5H41.0132V0.527344ZM45.9468 3.77344V16.2539C46.6577 16.2539 47.0952 16.1133 47.2593 15.832C47.4233 15.543 47.5054 14.7656 47.5054 13.5V6.12891C47.5054 5.26953 47.478 4.71875 47.4233 4.47656C47.3686 4.23437 47.2436 4.05859 47.0483 3.94922C46.853 3.83203 46.4858 3.77344 45.9468 3.77344Z" fill="currentColor"/>
-                    </svg>
-                </a>
-        
-            </div>
 
-                <ul class="text-sm pt-2">
+
+                <ul class="text-sm p-2 bg-white text-zinc-700 rounded-2xl mt-3">
                 {%- for entry in collections.all | eleventyNavigation %}
-                    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} class="block px-3 py-2 rounded-lg {% if entry.url == page.url %}bg-white/10 text-white{% endif %}">{{ entry.title }}</a></li>
+                    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} class="block px-3 py-2 rounded-lg {% if entry.url == page.url %}bg-zinc-100 text-zinc-900 font-bold{% endif %}">{{ entry.title }}</a></li>
                 {%- endfor %}
                 </ul>
 
             </aside>
-        
-            <div class="flex-1 max-w-screen-lg mx-auto p-3 md:p-6">
 
-                <div class="flex justify-between justify-center">
+            <div class="flex flex-row flex-1">
+                        
+                <div class="flex-1"> 
                     
-                    <h2 class="mb-6 text-lg md:text-3xl font-semibold">{{ title }}</h2>
+                    <div class="flex-1 mx-auto">
 
-                    {# <div class=" {% if page.url == '/aspect-ratio-calculator/custom/' %}hidden{% endif %}">
-                        <a href="/aspect-ratio-calculator/custom"  class="inline-flex gap-1  text-zinc-800 
-                         hover:bg-zinc-900/10 focus:ring-2 focus:ring-offset-2  focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm pl-3 pr-4 py-2 transition">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0_142_449" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-                                <rect width="20" height="20" fill="currentColor"/>
-                                </mask>
-                                <g mask="url(#mask0_142_449)">
-                                <path d="M14.3646 16.9166C13.5454 16.9166 12.8493 16.6301 12.2763 16.0571C11.7032 15.484 11.4167 14.7879 11.4167 13.9687C11.4167 13.1496 11.7032 12.4535 12.2763 11.8804C12.8493 11.3073 13.5454 11.0208 14.3646 11.0208C15.1838 11.0208 15.8799 11.3073 16.4529 11.8804C17.026 12.4535 17.3125 13.1496 17.3125 13.9687C17.3125 14.7879 17.026 15.484 16.4529 16.0571C15.8799 16.6301 15.1838 16.9166 14.3646 16.9166ZM14.3667 15.5208C14.7958 15.5208 15.1615 15.3691 15.4635 15.0656C15.7656 14.7623 15.9167 14.396 15.9167 13.9666C15.9167 13.5375 15.7649 13.1719 15.4615 12.8698C15.1581 12.5677 14.7918 12.4166 14.3625 12.4166C13.9333 12.4166 13.5677 12.5684 13.2656 12.8719C12.9635 13.1752 12.8125 13.5415 12.8125 13.9708C12.8125 14.4 12.9642 14.7656 13.2677 15.0677C13.571 15.3698 13.9374 15.5208 14.3667 15.5208ZM9.32292 14.6666H3.96875C3.77708 14.6666 3.61285 14.5987 3.47604 14.4627C3.33924 14.3267 3.27083 14.1635 3.27083 13.9731C3.27083 13.7827 3.33924 13.618 3.47604 13.4791C3.61285 13.3403 3.77708 13.2708 3.96875 13.2708H9.32292C9.51458 13.2708 9.67882 13.3388 9.81563 13.4748C9.95243 13.6107 10.0208 13.7739 10.0208 13.9644C10.0208 14.1548 9.95243 14.3194 9.81563 14.4583C9.67882 14.5972 9.51458 14.6666 9.32292 14.6666ZM5.63542 8.97915C4.81625 8.97915 4.12014 8.69262 3.54708 8.11956C2.97403 7.54651 2.6875 6.8504 2.6875 6.03123C2.6875 5.21206 2.97403 4.51595 3.54708 3.9429C4.12014 3.36984 4.81625 3.08331 5.63542 3.08331C6.45458 3.08331 7.15069 3.36984 7.72375 3.9429C8.29681 4.51595 8.58333 5.21206 8.58333 6.03123C8.58333 6.8504 8.29681 7.54651 7.72375 8.11956C7.15069 8.69262 6.45458 8.97915 5.63542 8.97915ZM5.6375 7.58331C6.06667 7.58331 6.43229 7.43158 6.73438 7.12811C7.03646 6.82477 7.1875 6.45845 7.1875 6.02915C7.1875 5.59998 7.03576 5.23435 6.73229 4.93227C6.42896 4.63019 6.06264 4.47915 5.63333 4.47915C5.20417 4.47915 4.83854 4.63088 4.53646 4.93435C4.23438 5.23769 4.08333 5.60401 4.08333 6.03331C4.08333 6.46248 4.23507 6.8281 4.53854 7.13019C4.84188 7.43227 5.20819 7.58331 5.6375 7.58331ZM16.0312 6.72915H10.6771C10.4854 6.72915 10.3212 6.66116 10.1844 6.52519C10.0476 6.38922 9.97917 6.22602 9.97917 6.03561C9.97917 5.84519 10.0476 5.68054 10.1844 5.54165C10.3212 5.40276 10.4854 5.33331 10.6771 5.33331H16.0312C16.2229 5.33331 16.3872 5.4013 16.524 5.53727C16.6608 5.67324 16.7292 5.83644 16.7292 6.02685C16.7292 6.21727 16.6608 6.38192 16.524 6.52081C16.3872 6.6597 16.2229 6.72915 16.0312 6.72915Z" fill="currentColor"/>
-                                </g>
-                                </svg>
+                        {# <div class="flex justify-between justify-center">
+                            <h2 class="mb-6 text-lg md:text-lg font-bold">{{ title }}</h2>
+                        </div> #}
 
-                        Image Upload Calculator
-                        </a>
-                    </div> #}
-                </div>
+                        <form id="aspect-form" class="bg-white p-4 md:p-6 mb-6 rounded-2xl"> 
+                            <div class="flex flex-wrap gap-3" >
+                                <div class="flex-1 mb-6">
+                                    {{ inputField('Ratio Width', 'ratio-width', 'ratio-width', ratioWidth, 'number') }}
+                                </div>
+                                <div class="flex-1 mb-4">
+                                    {{ inputField('Ratio Height', 'ratio-height', 'ratio-height', ratioHeight, 'number') }}
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <div class="flex-1">
+                                    {{ inputField('Pixel Width', 'pixel-width', 'pixel-width', pixelWidth, 'number') }}
+                                </div>
+                                <div class="flex-1">
+                                    {{ inputField('Pixel Height', 'pixel-height', 'pixel-height', pixelHeight, 'number') }}
+                                </div>
+                            </div>
+                        </form>
 
+                        <div class="flex flex-col gap-6">
+                                        
+                            <div id="template-options" class="bg-white rounded-xl">
 
-                <form id="aspect-form" class="bg-white p-4 md:p-6 mb-6 rounded-2xl"> 
-                    <div class="flex flex-wrap gap-3" >
-                        <div class="flex-1 mb-6">
-                            <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="ratio-width">
-                            Ratio Width
-                            </label>
-                            <input class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none  bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" type="number" id="ratio-width" name="ratio-width" value="{{ratioWidth}}">
-                        </div>
-                        <div class="flex-1 mb-4">
-                            <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="ratio-height">
-                            Ratio Height
-                            </label>
-                            <input class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none  bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" type="number" id="ratio-height" name="ratio-height" value="{{ratioHeight}}">
-                        </div>
-                    </div>
-                    <div class="flex gap-3">
-                        <div class="flex-1">
-                            <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="pixel-width">
-                            Width
-                            </label>
-                            <input class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" type="number" id="pixel-width" name="pixel-width" value="{{pixelWidth}}">
-                        </div>
-                        <div class="flex-1">
-                            <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="pixel-height">
-                            Height
-                            </label>
-                            <input class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none  bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" type="number" id="pixel-height" name="pixel-height" value="576">
-                        </div>
-                    </div>
-                </form>
+                                <div class="border-b border-zinc-200 px-6 py-4">
 
-                <div class="flex flex-col gap-6">
-                
-                    <div class=" flex items-center justify-center bg-white relative rounded-xl border overflow-hidden" id="placeholder-container">
-                        <div class="absolute right-0 top-0 m-2">
-                            <button class="inline-flex items-center justify-center w-full text-white bg-indigo-600 hover:bg-indigo-900 focus:ring-2 focus:ring-offset-2  focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm px-4 py-2.5 shadow transition" id="download-button">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 14C1.7835 14 1 13.2165 1 12.25L1 9.74998C1 9.33576 1.33579 8.99998 1.75 8.99998C2.16421 8.99998 2.5 9.33576 2.5 9.74998L2.5 12.25C2.5 12.388 2.61193 12.5 2.75 12.5H13.25C13.3881 12.5 13.5 12.388 13.5 12.25V9.74998C13.5 9.33576 13.8358 8.99998 14.25 8.99998C14.6642 8.99998 15 9.33576 15 9.74998V12.25C15 13.2165 14.2165 14 13.25 14H2.75Z" fill="currentColor"/>
-                                    <path d="M7.25 7.68932L7.25 2C7.25 1.58579 7.58578 1.25 8 1.25C8.41421 1.25 8.75 1.58579 8.75 2L8.75 7.68932L10.7197 5.71965C11.0126 5.42675 11.4874 5.42675 11.7803 5.71965C12.0732 6.01254 12.0732 6.48741 11.7803 6.78031L8.53033 10.0303C8.23744 10.3232 7.76256 10.3232 7.46967 10.0303L4.21967 6.78031C3.92678 6.48741 3.92678 6.01254 4.21967 5.71965C4.51256 5.42675 4.98744 5.42675 5.28033 5.71965L7.25 7.68932Z" fill="currentColor"/>
-                                    </svg>
-                            </button>
-                        </div>
-                        <img src="https://placehold.co/1024x576/EEE/666.svg?font=open-sans" class="max-w-full h-auto self-center object-contain opacity-0 transition ring-2 ring-indigo-700 ring-offset-2 max-h-64 m-6" alt="" id="image-placeholder">
-                    </div>
-                
-                    <div id="template-options" class="bg-white rounded-xl">
+                                    <div class="inline-flex items-center">
+                                        {{ checkboxField('Custom text', 'has-custom-text', false) }}
+                                    </div> 
 
-                        <div class="border-b border-zinc-200 px-6 py-4">
+                                    <div class="mt-6 hidden" id="custom-text-container">
+                                        <label for="custom-text-label" class="block mb-2 text-sm font-medium text-gray-900">Add your custom text</label>
+                                        <input type="text" id="custom-text-label" class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" value="Custom text">
+                                    </div>
 
-                            <div class="inline-flex items-center">
-                                <label class="relative flex items-center rounded-full cursor-pointer" htmlFor="checkbox">
-                                    <input type="checkbox" id="has-custom-text" 
-                                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-zinc-300 hover:border-zinc-500 transition-all checked:border-indigo-700 hover:checked:border-transparent checked:bg-indigo-700"
-                                    id="checkbox" />
-                                    <span
-                                    class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
-                                            stroke="currentColor" stroke-width="1">
-                                            <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </label>
+                                </div>
 
-                                <label for="has-custom-text" class="ms-2 text-sm font-medium">Custom text</label>
+                                <div class="border-b border-zinc-200 px-6 py-4">
+                                    
+                                    <h3 class="text-sm font-medium mb-2">Font Family</h3>
 
-                            </div> 
+                                    <div class="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-8">
+                                        <button data-font="lato" class="font-button bg-zinc-100 block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/lato.svg" class="w-3/5 mx-auto">
+                                            <div class="text-xxs text-zinc-900 font-semibold mt-1">Lato</div>
+                                        </button>
+                                        <button data-font="lora" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/lora.svg" class="w-3/5 mx-auto">
+                                            <div class="text-xxs text-zinc-900 font-semibold mt-1">Lora</div>
+                                        </button>
+                                        <button data-font="montserrat" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/montserrat.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1 justify-center">
+                                                <div class="truncate">Montserrat</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="open-sans" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square ring-2 ring-indigo-700 ring-offset-2 hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/open-sans.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1  justify-center text-xxs text-zinc-900 font-semibold mt-1">
+                                                <div class="truncate">Open Sans</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="oswald" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/oswald.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Oswald</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="playfair-display" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/playfair-display.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Playflair Display</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="pt-sans" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/pt-sans.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1 justify-center">
+                                                <div class="truncate">PT Sans</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="raleway" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/raleway.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Raleway</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="roboto" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/roboto.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Roboto</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="source-sans-pro" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/source-sans-pro.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Source Sans Pro</div>
+                                            </div>
+                                        </button>
+                                    </div>
 
+                                </div>
 
-                            <div class="mt-6 hidden" id="custom-text-container">
-                                <label for="custom-text-label" class="block mb-2 text-sm font-medium text-gray-900">Add your custom text</label>
-                                <input type="text" id="custom-text-label" class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" value="Custom text">
+                                <div class="border-b border-zinc-200 px-6 py-4">
+
+                                    <h3 class="text-sm font-medium mb-2">Text color</h3>
+
+                                    <div class="grid grid-cols-6 gap-2 sm:grid-cols-11 xl:grid-cols-16">
+                                        <button data-theme="gray-50" data-theme-fg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-full aspect-square"></button>
+                                        <button data-theme="gray-100" data-theme-fg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-200" data-theme-fg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-full aspect-square"> </button>
+                                        <button data-theme="gray-300" data-theme-fg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-400" data-theme-fg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-500" data-theme-fg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-600" data-theme-fg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-700" data-theme-fg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-800" data-theme-fg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-full aspect-square ring-2 ring-indigo-700 ring-offset-2"></button>
+                                        <button data-theme="gray-900" data-theme-fg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-950" data-theme-fg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                    </div>
+
+                                </div>
+
+                                <div class="px-6 py-4">
+
+                                    <h3 class="text-sm font-medium mb-2">Background color</h3>
+
+                                    <div class="grid grid-cols-6 gap-2 sm:grid-cols-11 xl:grid-cols-16">
+                                        <button data-theme="gray-50" data-theme-bg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-full aspect-square"></button>
+                                        <button data-theme="gray-100" data-theme-bg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 hover:border hover:border-zinc-500 transition rounded-full aspect-square ring-2 ring-indigo-700 ring-offset-2"></button>
+                                        <button data-theme="gray-200" data-theme-bg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-full aspect-square"> </button>
+                                        <button data-theme="gray-300" data-theme-bg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-400" data-theme-bg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-500" data-theme-bg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-600" data-theme-bg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-700" data-theme-bg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-800" data-theme-bg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-900" data-theme-bg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-950" data-theme-bg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                    </div>
+
+                                </div>
+
                             </div>
 
                         </div>
 
-                        <div class="border-b border-zinc-200 px-6 py-4">
-                            
-                            <h3 class="text-sm font-medium mb-2">Font Family</h3>
-
-                            <div class="grid grid-cols-4 gap-3 md:grid-cols-6 lg:grid-cols-10">
-                                <button data-font="lato" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/lato.svg" class="w-4/5 mx-auto">
-                                    <div class="text-xxs">Lato</div>
-                                </button>
-                                <button data-font="lora" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/lora.svg" class="w-4/5 mx-auto">
-                                    <div class="text-xxs">Lora</div>
-                                </button>
-                                <button data-font="montserrat" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/montserrat.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Montserrat</div>
-                                    </div>
-                                </button>
-                                <button data-font="open-sans" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square ring-2 ring-indigo-700 ring-offset-2 hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/open-sans.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Open Sans</div>
-                                    </div>
-                                </button>
-                                <button data-font="oswald" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/oswald.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Oswald</div>
-                                    </div>
-                                </button>
-                                <button data-font="playfair-display" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/playfair-display.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Playflair Display</div>
-                                    </div>
-                                </button>
-                                <button data-font="pt-sans" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/pt-sans.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">PT Sans</div>
-                                    </div>
-                                </button>
-                                <button data-font="raleway" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/raleway.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Raleway</div>
-                                    </div>
-                                </button>
-                                <button data-font="roboto" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/roboto.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Roboto</div>
-                                    </div>
-                                </button>
-                                <button data-font="source-sans-pro" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/source-sans-pro.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Source Sans Pro</div>
-                                    </div>
-                                </button>
-                            </div>
-
-                        </div>
-
-                        <div class="border-b border-zinc-200 px-6 py-4">
-
-                            <h3 class="text-sm font-medium mb-2">Text color</h3>
-
-                            <div class="grid grid-cols-6 gap-2 sm:grid-cols-10 md:grid-cols-8 lg:grid-cols-11">
-                                <div data-theme="gray-50" data-theme-fg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-100" data-theme-fg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-200" data-theme-fg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"> </div>
-                                <div data-theme="gray-300" data-theme-fg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-400" data-theme-fg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-500" data-theme-fg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-600" data-theme-fg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-700" data-theme-fg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-800" data-theme-fg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3] ring-2 ring-indigo-700 ring-offset-2"></div>
-                                <div data-theme="gray-900" data-theme-fg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-950" data-theme-fg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="px-6 py-4">
-
-                            <h3 class="text-sm font-medium mb-2">Background color</h3>
-
-                            <div class="grid grid-cols-6 gap-2 sm:grid-cols-10 md:grid-cols-8 lg:grid-cols-11">
-                                <div data-theme="gray-50" data-theme-bg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-100" data-theme-bg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3] ring-2 ring-indigo-700 ring-offset-2"></div>
-                                <div data-theme="gray-200" data-theme-bg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"> </div>
-                                <div data-theme="gray-300" data-theme-bg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-400" data-theme-bg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-500" data-theme-bg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-600" data-theme-bg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-700" data-theme-bg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-800" data-theme-bg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-900" data-theme-bg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-950" data-theme-bg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl flex flex-col md:flex-row flex-wrap gap-2">
-                        <input type="text" id="copy-link" class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500 flex-1">
-                        <button type="button" id="copy-url-button"  class="text-white bg-indigo-600 hover:bg-indigo-900 focus:ring-2 focus:ring-offset-2  focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm px-5 py-2.5 shadow transition">
-                            Copy url
-                        </button>
-                            
                     </div>
 
                 </div>
-
-                {# <div class="text-center mt-10 hidden">
-                    <h3 class="text-2xl text-gray-700 font-medium mb-2">Daily Trends newsletter</h3>
-                </div>
-
-                <div class="flex gap-6 mt-10 hidden">
-                    <div class="flex-1">
-                        <h2 class="text-xl font-medium mb-3">16:9 Aspect Ratio</h2>
-                        <p class="text-sm text-gray-700">Aspect Ratio of 16:9 ("Sixteen-by-Nine" and "Sixteen-to-Nine") which is also known as High Definition (HD) became leading aspect ratio since the start of the 21st century. It is the international standard format of HDTV, non-HD digital television and analog widescreen television PALplus. Today many digital video cameras have the capability to record in High Definition format, and it is the only widescreen aspect ratio natively supported by the DVD standard.</p>
-                    </div>
-                    <div class="flex-1">
-                        <h2 class="text-xl font-medium mb-3">Top 16:9 resolutions</h2>
-                        <ul class="text-sm text-gray-700 list-disc pl-4">
-                            <li>X Post Landscape</li>
-                            <li>640 x 360 (nHD)</li>
-                            <li>854 x 480 (FWVGA)</li>
-                            <li>960 x 540 (qHD)</li>
-                            <li>1024 x 576 (WSVGA)</li>
-                            <li>1280 x 720 (HD/WXGA)</li>
-                            <li>1366 x 768 (FWXGA)</li>
-                            <li>1600 x 900 (HD+)</li>
-                            <li>1920 x 1080 (FHD)</li>
-                            <li>2048 x 1152 (QWXGA)</li>
-                            <li>2560 x 1440 (QHD)</li>
-                            <li>X Post Landscape</li>
-                            <li>640 x 360 (nHD)</li>
-                            <li>854 x 480 (FWVGA)</li>
-                            <li>960 x 540 (qHD)</li>
-                            <li>1024 x 576 (WSVGA)</li>
-                            <li>1280 x 720 (HD/WXGA)</li>
-                            <li>1366 x 768 (FWXGA)</li>
-                            <li>1600 x 900 (HD+)</li>
-                            <li>1920 x 1080 (FHD)</li>
-                            <li>2048 x 1152 (QWXGA)</li>
-                            <li>2560 x 1440 (QHD)</li>
-                        </ul>
-                    </div>
-                </div> #}
+    
             </div>
-            {{ content | safe }}
+
+            <div class="sm:w-56 lg:w-72">
+                <div class="flex flex-col bg-white relative flex-0 shrink-0 rounded-2xl p-6 pb-3 gap-2" id="placeholder-container">
+
+                    <img src="https://placehold.co/1024x576/EEE/666.svg?font=open-sans" class="max-w-full h-auto self-center object-contain opacity-0 transition max-h-64" alt="" id="image-placeholder">
+
+                    <button class="grow-0 flex gap-2 items-center justify-center text-indigo-600 bg-white  hover:bg-zinc-100 focus:ring-2 focus:ring-offset-2 focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm p-2.5 " id="download-button">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 14C1.7835 14 1 13.2165 1 12.25L1 9.74998C1 9.33576 1.33579 8.99998 1.75 8.99998C2.16421 8.99998 2.5 9.33576 2.5 9.74998L2.5 12.25C2.5 12.388 2.61193 12.5 2.75 12.5H13.25C13.3881 12.5 13.5 12.388 13.5 12.25V9.74998C13.5 9.33576 13.8358 8.99998 14.25 8.99998C14.6642 8.99998 15 9.33576 15 9.74998V12.25C15 13.2165 14.2165 14 13.25 14H2.75Z" fill="currentColor"/>
+                            <path d="M7.25 7.68932L7.25 2C7.25 1.58579 7.58578 1.25 8 1.25C8.41421 1.25 8.75 1.58579 8.75 2L8.75 7.68932L10.7197 5.71965C11.0126 5.42675 11.4874 5.42675 11.7803 5.71965C12.0732 6.01254 12.0732 6.48741 11.7803 6.78031L8.53033 10.0303C8.23744 10.3232 7.76256 10.3232 7.46967 10.0303L4.21967 6.78031C3.92678 6.48741 3.92678 6.01254 4.21967 5.71965C4.51256 5.42675 4.98744 5.42675 5.28033 5.71965L7.25 7.68932Z" fill="currentColor"/>
+                        </svg>
+
+                        Download Image
+
+                    </button>
+                </div>
+
+                <div class="flex flex-col gap-2 bg-white rounded-2xl p-2 mt-5">
+                    {{ inputField('', 'copy-link', 'copy-link', copyLink, 'text') }}
+
+                    <button type="button" id="copy-url-button"  class="shrink-0 text-white bg-indigo-600 hover:bg-indigo-900 focus:ring-2 focus:ring-offset-2  focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm px-5 py-2.5 shadow transition">
+                        Copy image url
+                    </button>    
+                </div>
+
+                
+            </div>
+            {# {{ content | safe }} #}
         </main>
 
         {% include "footer.njk" %}
 
         <script src="/js/aspect-ratio-calculator.js"></script>
-
-
     
     </body>
 </html>

@@ -38,16 +38,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateImageSrc = () => {
         const width = pixelWidthInput.value;
         const height = pixelHeightInput.value;
+        const ratioWidth = parseFloat(ratioWidthInput.value);
+        const ratioHeight = parseFloat(ratioHeightInput.value);
         let imageUrl = `https://placehold.co/${width}x${height}/${selectedBgColor}/${selectedFgColor}.svg?font=${selectedFont}`;
 
-        if (hasCustomTextCheckbox.checked) {
+        if (hasCustomTextCheckbox.checked && customTextInput.value.trim() !== '') {
+            // If custom text checkbox is checked and text is provided, use custom text
             imageUrl += `&text=${encodeURIComponent(customTextInput.value)}`;
+        } else if (!isNaN(ratioWidth) && !isNaN(ratioHeight) && ratioWidth > 0 && ratioHeight > 0) {
+            // If custom text is not checked, use the aspect ratio as text
+            imageUrl += `&text=${encodeURIComponent(ratioWidth + ':' + ratioHeight)}`;
         }
 
         imagePlaceholder.src = imageUrl;
         updateCopyLinkInput(imageUrl); // Update the copy link input field
-        console.log('test')
-
     };
 
     const updateCopyLinkInput = (imageUrl) => {
@@ -63,19 +67,19 @@ document.addEventListener('DOMContentLoaded', () => {
     attachClickEvent('.font-button', function () {
         // Reset all buttons to their default state
         document.querySelectorAll('.font-button').forEach(btn => {
-            btn.classList.add('bg-zinc-50' );
-            btn.classList.remove('ring-2', 'ring-indigo-700', 'ring-offset-2', 'bg-white' );
+            btn.classList.add('bg-zinc-50');
+            btn.classList.remove('ring-2', 'ring-indigo-700', 'ring-offset-2', 'bg-white');
         });
-    
+
         // Add classes to the clicked button
-        this.classList.remove('bg-zinc-50',);
-        this.classList.add('ring-2', 'ring-indigo-700', 'ring-offset-2', 'bg-white',);
-    
+        this.classList.remove('bg-zinc-50');
+        this.classList.add('ring-2', 'ring-indigo-700', 'ring-offset-2', 'bg-white');
+
         // Update the selected font
         selectedFont = this.dataset.font;
         updateImageSrc();
     });
-    
+
     attachClickEvent('[data-theme-bg]', function () {
         document.querySelectorAll('[data-theme-bg]').forEach(btn => {
             btn.classList.remove('ring-2', 'ring-indigo-700', 'ring-offset-2');
@@ -98,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateImageSrc();
     });
 
-
     const downloadImage = async () => {
         const imageUrl = imagePlaceholder.src;
 
@@ -112,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(imageUrl);
             if (!response.ok) throw new Error('Failed to fetch image');
             const blob = await response.blob();
-            
+
             // Create a link element and trigger the download
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
@@ -130,11 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     copyUrlButton.addEventListener('click', () => {
         const url = copyLinkInput.value;
-    
+
         navigator.clipboard.writeText(url).then(() => {
             // Change button text to "Copied"
             copyUrlButton.textContent = 'Copied';
-            
+
             // Optionally, revert the text back to "Copy" after a short delay
             setTimeout(() => {
                 copyUrlButton.textContent = 'Copy URL';
@@ -160,16 +163,17 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('opacity-0');
         overlay.classList.toggle('hidden');
     }
-    
+
+ 
     document.querySelector('.js-menu-toggle').addEventListener('click', toggleMenu);
     document.querySelector('.js-menu-toggle-close').addEventListener('click', toggleMenu);
-    
+
 
     // Delay the display of the image placeholder by 1 second
     setTimeout(function() {
         document.getElementById('image-placeholder').classList.remove('opacity-0');
     }, 500);
-    
+
     downloadButton.addEventListener('click', downloadImage);
 
     pixelWidthInput.addEventListener('input', () => calculateDimensions(true));

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
@@ -15,77 +15,98 @@
 
         <link rel="stylesheet" href="../../style.out.css" />
         
-
     </head>
-    <body class="bg-zinc-100 text-zinc-900">
+    <body class="bg-zinc-200 text-zinc-900 flex flex-col h-full">
 
-        <div class="fixed top-0 left-0 h-full w-full bg-zinc-900/50 z-40 hidden js-overlay"></div>
+        
+        
 
-         
-        <div class="border-b border-white/10 bg-zinc-900 text-white">
-<header class="flex justify-between px-5 py-3  md:h-[62px]">
-    <div class="flex items-center gap-3 w-full md:w-auto js-menu-toggle">
-        <button type="button" class="mr-2 md:hidden">
-                <svg width="24" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0_167_173" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="40">
-                <rect x="0.1875" width="40" height="40" fill="#D9D9D9"/>
-                </mask>
-                <g mask="url(#mask0_167_173)">
-                <path d="M5.46539 29.7779V27.1387H34.9096V29.7779H5.46539ZM5.46539 21.3054V18.6667H34.9096V21.3054H5.46539ZM5.46539 12.8333V10.1946H34.9096V12.8333H5.46539Z" fill="white"/>
-                </g>
-                </svg>
-        </button>
-        <a href="/" class="flex-1 items-center flex justify-center pr-10 md:block md:pr-0">
-            <svg class="w-16 md:w-14" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-2.33625e-07 0.570189L20.5537 0.570189L20.5537 5.91492L0 5.91492L-2.33625e-07 0.570189Z" fill="currentColor"/>
-                <path d="M-5.34397e-07 7.20425L13.7363 7.20425C15.2936 7.20425 16.3896 7.25503 17.0244 7.3566C17.6507 7.45816 18.2982 7.75862 18.9668 8.25796C19.627 8.75731 20.1305 9.41747 20.4775 10.2384C20.8161 11.0509 20.9854 12.0115 20.9854 13.1203C20.9854 14.3475 20.7822 15.4308 20.376 16.3703C19.9697 17.3097 19.4408 18.0122 18.7891 18.4777C18.1374 18.9432 17.4518 19.2183 16.7324 19.3029C16.0046 19.3875 14.4811 19.4298 12.1621 19.4298L0 19.4298L-2.33625e-07 14.0851L15.4121 14.0851C16.3092 14.0851 16.8848 14.0386 17.1387 13.9455C17.3841 13.8439 17.5068 13.645 17.5068 13.3488C17.5068 13.0102 17.3714 12.7944 17.1006 12.7013C16.8213 12.5998 16.1696 12.549 15.1455 12.549L-3.00772e-07 12.549L-5.34397e-07 7.20425Z" fill="currentColor"/>
-                <path d="M30.2197 0.527344V4.32422L26.54 15.7031H30.2197V19.5H21.126V16.7461L24.9229 4.32422H21.5713V0.527344H30.2197ZM31.2688 0.527344H39.4954V4.32422H36.2024V7.92188H39.2844V11.5312H36.2024V15.7031H39.8235V19.5H31.2688V0.527344ZM41.0132 0.527344H44.7046C47.0874 0.527344 48.6968 0.636719 49.5327 0.855469C50.3764 1.07422 51.0171 1.43359 51.4546 1.93359C51.8921 2.43359 52.1655 2.99219 52.2749 3.60938C52.3843 4.21875 52.4389 5.42188 52.4389 7.21875V13.8633C52.4389 15.5664 52.3569 16.707 52.1929 17.2852C52.0366 17.8555 51.7593 18.3047 51.3608 18.6328C50.9624 18.9531 50.4702 19.1797 49.8843 19.3125C49.2983 19.4375 48.4155 19.5 47.2358 19.5H41.0132V0.527344ZM45.9468 3.77344V16.2539C46.6577 16.2539 47.0952 16.1133 47.2593 15.832C47.4233 15.543 47.5054 14.7656 47.5054 13.5V6.12891C47.5054 5.26953 47.478 4.71875 47.4233 4.47656C47.3686 4.23437 47.2436 4.05859 47.0483 3.94922C46.853 3.83203 46.4858 3.77344 45.9468 3.77344Z" fill="currentColor"/>
-            </svg>
-        </a>
-         
-        <div class=" gap-3 items-center hidden md:flex">
-        <span class="flex items-center justify-center border-l border-white/25 w-1 h-5 ml-1"></span>
-        <h1 class="text-md">Aspect Ratio Calculator</h1>
-        </div>
-        
-    </div>
-     
-    <nav class="flex gap-2 hidden md:flex">
-        
-        <a href="https://buymeacoffee.com/marcomonteiro" target="blank" class="bg-white/10 text-sm px-5 py-3 leading-none font-medium rounded-xl">Buy me a coffee</a>
-    </nav>
+        <div class="fixed top-0 left-0 h-full w-full bg-black/30 z-40 hidden js-overlay"></div>
+
+        <header class="flex justify-between items-center px-5 h-14 bg-zinc-900 shrink-0">
+
+    <div class="flex flex-1 items-center gap-3 w-full lg:w-auto js-menu-toggle">
+
     
-</header>
+
+    
+    <button type="button" class="mr-2 lg:hidden js-menu-toggle-open">
+            <svg width="24" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_167_173" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="40">
+            <rect x="0.1875" width="40" height="40" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_167_173)">
+            <path d="M5.46539 29.7779V27.1387H34.9096V29.7779H5.46539ZM5.46539 21.3054V18.6667H34.9096V21.3054H5.46539ZM5.46539 12.8333V10.1946H34.9096V12.8333H5.46539Z" fill="white"/>
+            </g>
+            </svg>
+    </button>
+    
+
+    <a href="/" class="items-center flex justify-center pr-10 lg:block lg:pr-0">
+        <img src="../../assets/images/logo.png" class="w-14">
+    </a>
+
 </div>
 
+    <div class="flex-1 items-center justify-center hidden lg:flex flex-col">
+        <h1 class="text-white/95">Instagram Post Landscape</h1>
+    </div>
+ 
+    <nav class="flex flex-col items-end flex-1 gap-2 lg:flex">
+        <a href="https://buymeacoffee.com/marcomonteiro" target="blank" class="flex gap-2 items-center bg-white/10 text-white/95 text-sm px-5 h-10 leading-none font-medium rounded-xl">
+            <img src="../../assets/images/heart.png" class="w-5">
+            Buy me a coffee
+        </a>
+    </nav>
+
+</header>
+
+        <main class="sm:flex flex-wrap justify-between gap-10 gap-5 lg:gap-5 flex-1 p-5 max-w-[90rem] mx-auto w-full">
+
+            <aside class="fixed top-0 h-full lg:relative lg:h-auto w-56 lg:w-72 text-zinc-900 z-50 lg:block transition-all duration-300 -translate-x-full opacity-0 lg:opacity-100 lg:translate-x-0 js-menu">
 
 
-        <main class="flex flex-wrap">
+                <div class="flex items-center gap-3 px-5 h-14 bg-zinc-900 z-50 lg:hidden">
+                     
+                    <div class="flex flex-1 items-center gap-3 w-full lg:w-auto js-menu-toggle">
 
-            <aside class="fixed top-0 h-full md:relative md:h-auto w-64 bg-zinc-900 px-2 text-zinc-400 z-50 md:block transition-all duration-300 -translate-x-full opacity-0 md:opacity-100 md:translate-x-0 js-menu">
+    
+    <button type="button" class="mr-2 js-menu-toggle-close">
+        <svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_165_164" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="41">
+            <rect x="0.1875" y="0.5625" width="40" height="40" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_165_164)">
+            <path d="M10.7429 31.8679L8.90961 30.0071L18.3263 20.5625L8.90961 11.1179L10.7429 9.25708L20.1875 18.7012L29.6321 9.25708L31.4654 11.1179L22.0488 20.5625L31.4654 30.0071L29.6321 31.8679L20.1875 22.4237L10.7429 31.8679Z" fill="white"/>
+            </g>
+        </svg>
+    </button>
+    
 
-            <div class="flex items-center gap-3 h-[62px] px-3 z-50 md:hidden">
-                <button type="button" class="mr-2 js-menu-toggle-close">
-                    <svg width="24" height="24" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="mask0_165_164" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="41">
-                    <rect x="0.1875" y="0.5625" width="40" height="40" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_165_164)">
-                    <path d="M10.7429 31.8679L8.90961 30.0071L18.3263 20.5625L8.90961 11.1179L10.7429 9.25708L20.1875 18.7012L29.6321 9.25708L31.4654 11.1179L22.0488 20.5625L31.4654 30.0071L29.6321 31.8679L20.1875 22.4237L10.7429 31.8679Z" fill="white"/>
-                    </g>
+    
+
+    <a href="/" class="items-center flex justify-center pr-10 lg:block lg:pr-0">
+        <img src="../../assets/images/logo.png" class="w-14">
+    </a>
+
+</div>
+                </div>
+
+                <button class="flex w-full justify-between items-center bg-white font-bold text-sm py-2.5 px-5 rounded-2xl">
+                    Aspect ratio calculator
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_197_200" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                        <rect width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_197_200)">
+                        <path d="M12 14.95C11.8667 14.95 11.7417 14.9292 11.625 14.8875C11.5083 14.8458 11.4 14.775 11.3 14.675L6.69999 10.075C6.51665 9.89166 6.42082 9.66249 6.41249 9.38749C6.40415 9.11249 6.49999 8.87499 6.69999 8.67499C6.88332 8.49166 7.11665 8.39999 7.39999 8.39999C7.68332 8.39999 7.91665 8.49166 8.09999 8.67499L12 12.55L15.9 8.67499C16.0833 8.49166 16.3125 8.39583 16.5875 8.38749C16.8625 8.37916 17.1 8.47499 17.3 8.67499C17.4833 8.85833 17.575 9.09166 17.575 9.37499C17.575 9.65833 17.4833 9.89166 17.3 10.075L12.7 14.675C12.6 14.775 12.4917 14.8458 12.375 14.8875C12.2583 14.9292 12.1333 14.95 12 14.95Z" fill="black" fill-opacity="0.94"/>
+                        </g>
                     </svg>
+
                 </button>
-                <a href="/" class="text-white">
-                    <svg width="54" height="20" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M-2.33625e-07 0.570189L20.5537 0.570189L20.5537 5.91492L0 5.91492L-2.33625e-07 0.570189Z" fill="currentColor"/>
-                        <path d="M-5.34397e-07 7.20425L13.7363 7.20425C15.2936 7.20425 16.3896 7.25503 17.0244 7.3566C17.6507 7.45816 18.2982 7.75862 18.9668 8.25796C19.627 8.75731 20.1305 9.41747 20.4775 10.2384C20.8161 11.0509 20.9854 12.0115 20.9854 13.1203C20.9854 14.3475 20.7822 15.4308 20.376 16.3703C19.9697 17.3097 19.4408 18.0122 18.7891 18.4777C18.1374 18.9432 17.4518 19.2183 16.7324 19.3029C16.0046 19.3875 14.4811 19.4298 12.1621 19.4298L0 19.4298L-2.33625e-07 14.0851L15.4121 14.0851C16.3092 14.0851 16.8848 14.0386 17.1387 13.9455C17.3841 13.8439 17.5068 13.645 17.5068 13.3488C17.5068 13.0102 17.3714 12.7944 17.1006 12.7013C16.8213 12.5998 16.1696 12.549 15.1455 12.549L-3.00772e-07 12.549L-5.34397e-07 7.20425Z" fill="currentColor"/>
-                        <path d="M30.2197 0.527344V4.32422L26.54 15.7031H30.2197V19.5H21.126V16.7461L24.9229 4.32422H21.5713V0.527344H30.2197ZM31.2688 0.527344H39.4954V4.32422H36.2024V7.92188H39.2844V11.5312H36.2024V15.7031H39.8235V19.5H31.2688V0.527344ZM41.0132 0.527344H44.7046C47.0874 0.527344 48.6968 0.636719 49.5327 0.855469C50.3764 1.07422 51.0171 1.43359 51.4546 1.93359C51.8921 2.43359 52.1655 2.99219 52.2749 3.60938C52.3843 4.21875 52.4389 5.42188 52.4389 7.21875V13.8633C52.4389 15.5664 52.3569 16.707 52.1929 17.2852C52.0366 17.8555 51.7593 18.3047 51.3608 18.6328C50.9624 18.9531 50.4702 19.1797 49.8843 19.3125C49.2983 19.4375 48.4155 19.5 47.2358 19.5H41.0132V0.527344ZM45.9468 3.77344V16.2539C46.6577 16.2539 47.0952 16.1133 47.2593 15.832C47.4233 15.543 47.5054 14.7656 47.5054 13.5V6.12891C47.5054 5.26953 47.478 4.71875 47.4233 4.47656C47.3686 4.23437 47.2436 4.05859 47.0483 3.94922C46.853 3.83203 46.4858 3.77344 45.9468 3.77344Z" fill="currentColor"/>
-                    </svg>
-                </a>
-        
-            </div>
 
-                <ul class="text-sm pt-2">
+
+                <ul class="text-sm p-2 bg-white text-zinc-700 rounded-2xl mt-3">
                     <li class="nav-item"><a href="/aspect-ratio-calculator/" class="block px-3 py-2 rounded-lg ">Aspect Ratio Calculator</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/16-9/" class="block px-3 py-2 rounded-lg ">16:9 Widescreen</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/9-16/" class="block px-3 py-2 rounded-lg ">9:16 Vertical</a></li>
@@ -94,7 +115,7 @@
                     <li class="nav-item"><a href="/aspect-ratio-calculator/21-9/" class="block px-3 py-2 rounded-lg ">21:9 Ultrawide</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/2-391/" class="block px-3 py-2 rounded-lg ">2.39:1 CinemaScope</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/instagram-carousel/" class="block px-3 py-2 rounded-lg ">Instagram Carousel</a></li>
-                    <li class="nav-item"><a href="/aspect-ratio-calculator/instagram-post-landscape/" aria-current="page" class="block px-3 py-2 rounded-lg bg-white/10 text-white">Instagram Post Landscape</a></li>
+                    <li class="nav-item"><a href="/aspect-ratio-calculator/instagram-post-landscape/" aria-current="page" class="block px-3 py-2 rounded-lg bg-zinc-100 text-zinc-900 font-bold">Instagram Post Landscape</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/instagram-post-portrait/" class="block px-3 py-2 rounded-lg ">Instagram Post Portrait</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/instagram-reel/" class="block px-3 py-2 rounded-lg ">Instagram Reel</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/instagram-story/" class="block px-3 py-2 rounded-lg ">Instagram Post Story</a></li>
@@ -102,209 +123,252 @@
                 </ul>
 
             </aside>
-        
-            <div class="flex-1 max-w-screen-lg mx-auto p-3 md:p-6">
 
-                <div class="flex justify-between justify-center">
+            <div class="flex flex-row flex-1">
+                        
+                <div class="flex-1"> 
                     
-                    <h2 class="mb-6 text-lg md:text-3xl font-semibold">Instagram Post Landscape</h2>
+                    <div class="flex-1 mx-auto">
 
-                    
+                        
+
+                        <form id="aspect-form" class="bg-white p-4 md:p-6 mb-6 rounded-2xl"> 
+                            <div class="flex flex-wrap gap-3" >
+                                <div class="flex-1 mb-6">
+                                    
+    
+    <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="ratio-width">
+        Ratio Width
+    </label>
+    
+    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+           type="number" 
+           id="ratio-width" 
+           name="ratio-width" 
+           value="1.91">
+
+                                </div>
+                                <div class="flex-1 mb-4">
+                                    
+    
+    <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="ratio-height">
+        Ratio Height
+    </label>
+    
+    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+           type="number" 
+           id="ratio-height" 
+           name="ratio-height" 
+           value="1">
+
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <div class="flex-1">
+                                    
+    
+    <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="pixel-width">
+        Pixel Width
+    </label>
+    
+    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+           type="number" 
+           id="pixel-width" 
+           name="pixel-width" 
+           value="1080">
+
+                                </div>
+                                <div class="flex-1">
+                                    
+    
+    <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="pixel-height">
+        Pixel Height
+    </label>
+    
+    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+           type="number" 
+           id="pixel-height" 
+           name="pixel-height" 
+           value="">
+
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="flex flex-col gap-6">
+                                        
+                            <div id="template-options" class="bg-white rounded-xl">
+
+                                <div class="border-b border-zinc-200 px-6 py-4">
+
+                                    <div class="inline-flex items-center">
+                                        
+    <label class="relative flex items-center rounded-full cursor-pointer" for="has-custom-text">
+        <input type="checkbox" id="has-custom-text" 
+               class="before:content[''] peer relative w-5 h-5 cursor-pointer appearance-none rounded-md border border-zinc-300 hover:border-zinc-500 transition-all checked:border-indigo-700 hover:checked:border-transparent checked:bg-indigo-700 shrink-0"
+                />
+        <span class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+        </span>
+    </label>
+
+    <label for="has-custom-text" class="ms-2 text-sm font-medium">Custom text</label>
+
+                                    </div> 
+
+                                    <div class="mt-6 hidden" id="custom-text-container">
+                                        <label for="custom-text-label" class="block mb-2 text-sm font-medium text-gray-900">Add your custom text</label>
+                                        <input type="text" id="custom-text-label" class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" value="Custom text">
+                                    </div>
+
+                                </div>
+
+                                <div class="border-b border-zinc-200 px-6 py-4">
+                                    
+                                    <h3 class="text-sm font-medium mb-2">Font Family</h3>
+
+                                    <div class="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-8">
+                                        <button data-font="lato" class="font-button bg-zinc-100 block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/lato.svg" class="w-3/5 mx-auto">
+                                            <div class="text-xxs text-zinc-900 font-semibold mt-1">Lato</div>
+                                        </button>
+                                        <button data-font="lora" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/lora.svg" class="w-3/5 mx-auto">
+                                            <div class="text-xxs text-zinc-900 font-semibold mt-1">Lora</div>
+                                        </button>
+                                        <button data-font="montserrat" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/montserrat.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1 justify-center">
+                                                <div class="truncate">Montserrat</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="open-sans" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square ring-2 ring-indigo-700 ring-offset-2 hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/open-sans.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1  justify-center text-xxs text-zinc-900 font-semibold mt-1">
+                                                <div class="truncate">Open Sans</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="oswald" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/oswald.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Oswald</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="playfair-display" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/playfair-display.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Playflair Display</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="pt-sans" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/pt-sans.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1 justify-center">
+                                                <div class="truncate">PT Sans</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="raleway" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/raleway.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Raleway</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="roboto" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/roboto.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Roboto</div>
+                                            </div>
+                                        </button>
+                                        <button data-font="source-sans-pro" class="font-button bg-zinc-100  block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
+                                            <img src="../../assets/images/fonts/source-sans-pro.svg" class="w-3/5 mx-auto">
+                                            <div class="flex px-1 text-xxs text-zinc-900 font-semibold mt-1  justify-center">
+                                                <div class="truncate">Source Sans Pro</div>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <div class="border-b border-zinc-200 px-6 py-4">
+
+                                    <h3 class="text-sm font-medium mb-2">Text color</h3>
+
+                                    <div class="grid grid-cols-6 gap-2 sm:grid-cols-11 xl:grid-cols-16">
+                                        <button data-theme="gray-50" data-theme-fg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-full aspect-square"></button>
+                                        <button data-theme="gray-100" data-theme-fg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-200" data-theme-fg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-full aspect-square"> </button>
+                                        <button data-theme="gray-300" data-theme-fg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-400" data-theme-fg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-500" data-theme-fg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-600" data-theme-fg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-700" data-theme-fg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-800" data-theme-fg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-full aspect-square ring-2 ring-indigo-700 ring-offset-2"></button>
+                                        <button data-theme="gray-900" data-theme-fg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-950" data-theme-fg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                    </div>
+
+                                </div>
+
+                                <div class="px-6 py-4">
+
+                                    <h3 class="text-sm font-medium mb-2">Background color</h3>
+
+                                    <div class="grid grid-cols-6 gap-2 sm:grid-cols-11 xl:grid-cols-16">
+                                        <button data-theme="gray-50" data-theme-bg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-full aspect-square"></button>
+                                        <button data-theme="gray-100" data-theme-bg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 hover:border hover:border-zinc-500 transition rounded-full aspect-square ring-2 ring-indigo-700 ring-offset-2"></button>
+                                        <button data-theme="gray-200" data-theme-bg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-full aspect-square"> </button>
+                                        <button data-theme="gray-300" data-theme-bg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-400" data-theme-bg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-500" data-theme-bg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-600" data-theme-bg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-700" data-theme-bg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-800" data-theme-bg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-900" data-theme-bg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                        <button data-theme="gray-950" data-theme-bg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-full aspect-square"></button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="sm:w-56 lg:w-72">
+                <div class="flex flex-col bg-white relative flex-0 shrink-0 rounded-2xl p-6 pb-3 gap-2" id="placeholder-container">
+
+                    <img src="https://placehold.co/1024x576/EEE/666.svg?font=open-sans" class="max-w-full h-auto self-center object-contain opacity-0 transition max-h-64" alt="" id="image-placeholder">
+
+                    <button class="grow-0 flex gap-2 items-center justify-center text-indigo-600 bg-white  hover:bg-zinc-100 focus:ring-2 focus:ring-offset-2 focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm p-2.5 " id="download-button">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 14C1.7835 14 1 13.2165 1 12.25L1 9.74998C1 9.33576 1.33579 8.99998 1.75 8.99998C2.16421 8.99998 2.5 9.33576 2.5 9.74998L2.5 12.25C2.5 12.388 2.61193 12.5 2.75 12.5H13.25C13.3881 12.5 13.5 12.388 13.5 12.25V9.74998C13.5 9.33576 13.8358 8.99998 14.25 8.99998C14.6642 8.99998 15 9.33576 15 9.74998V12.25C15 13.2165 14.2165 14 13.25 14H2.75Z" fill="currentColor"/>
+                            <path d="M7.25 7.68932L7.25 2C7.25 1.58579 7.58578 1.25 8 1.25C8.41421 1.25 8.75 1.58579 8.75 2L8.75 7.68932L10.7197 5.71965C11.0126 5.42675 11.4874 5.42675 11.7803 5.71965C12.0732 6.01254 12.0732 6.48741 11.7803 6.78031L8.53033 10.0303C8.23744 10.3232 7.76256 10.3232 7.46967 10.0303L4.21967 6.78031C3.92678 6.48741 3.92678 6.01254 4.21967 5.71965C4.51256 5.42675 4.98744 5.42675 5.28033 5.71965L7.25 7.68932Z" fill="currentColor"/>
+                        </svg>
+
+                        Download Image
+
+                    </button>
                 </div>
 
-
-                <form id="aspect-form" class="bg-white p-4 md:p-6 mb-6 rounded-2xl"> 
-                    <div class="flex flex-wrap gap-3" >
-                        <div class="flex-1 mb-6">
-                            <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="ratio-width">
-                            Ratio Width
-                            </label>
-                            <input class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none  bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" type="number" id="ratio-width" name="ratio-width" value="1.91">
-                        </div>
-                        <div class="flex-1 mb-4">
-                            <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="ratio-height">
-                            Ratio Height
-                            </label>
-                            <input class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none  bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" type="number" id="ratio-height" name="ratio-height" value="1">
-                        </div>
-                    </div>
-                    <div class="flex gap-3">
-                        <div class="flex-1">
-                            <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="pixel-width">
-                            Width
-                            </label>
-                            <input class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" type="number" id="pixel-width" name="pixel-width" value="1080">
-                        </div>
-                        <div class="flex-1">
-                            <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="pixel-height">
-                            Height
-                            </label>
-                            <input class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none  bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" type="number" id="pixel-height" name="pixel-height" value="576">
-                        </div>
-                    </div>
-                </form>
-
-                <div class="flex flex-col gap-6">
-                
-                    <div class=" flex items-center justify-center bg-white relative rounded-xl border overflow-hidden" id="placeholder-container">
-                        <div class="absolute right-0 top-0 m-2">
-                            <button class="inline-flex items-center justify-center w-full text-white bg-indigo-600 hover:bg-indigo-900 focus:ring-2 focus:ring-offset-2  focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm px-4 py-2.5 shadow transition" id="download-button">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 14C1.7835 14 1 13.2165 1 12.25L1 9.74998C1 9.33576 1.33579 8.99998 1.75 8.99998C2.16421 8.99998 2.5 9.33576 2.5 9.74998L2.5 12.25C2.5 12.388 2.61193 12.5 2.75 12.5H13.25C13.3881 12.5 13.5 12.388 13.5 12.25V9.74998C13.5 9.33576 13.8358 8.99998 14.25 8.99998C14.6642 8.99998 15 9.33576 15 9.74998V12.25C15 13.2165 14.2165 14 13.25 14H2.75Z" fill="currentColor"/>
-                                    <path d="M7.25 7.68932L7.25 2C7.25 1.58579 7.58578 1.25 8 1.25C8.41421 1.25 8.75 1.58579 8.75 2L8.75 7.68932L10.7197 5.71965C11.0126 5.42675 11.4874 5.42675 11.7803 5.71965C12.0732 6.01254 12.0732 6.48741 11.7803 6.78031L8.53033 10.0303C8.23744 10.3232 7.76256 10.3232 7.46967 10.0303L4.21967 6.78031C3.92678 6.48741 3.92678 6.01254 4.21967 5.71965C4.51256 5.42675 4.98744 5.42675 5.28033 5.71965L7.25 7.68932Z" fill="currentColor"/>
-                                    </svg>
-                            </button>
-                        </div>
-                        <img src="https://placehold.co/1024x576/EEE/666.svg?font=open-sans" class="max-w-full h-auto self-center object-contain opacity-0 transition ring-2 ring-indigo-700 ring-offset-2 max-h-64 m-6" alt="" id="image-placeholder">
-                    </div>
-                
-                    <div id="template-options" class="bg-white rounded-xl">
-
-                        <div class="border-b border-zinc-200 px-6 py-4">
-
-                            <div class="inline-flex items-center">
-                                <label class="relative flex items-center rounded-full cursor-pointer" htmlFor="checkbox">
-                                    <input type="checkbox" id="has-custom-text" 
-                                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-zinc-300 hover:border-zinc-500 transition-all checked:border-indigo-700 hover:checked:border-transparent checked:bg-indigo-700"
-                                    id="checkbox" />
-                                    <span
-                                    class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
-                                            stroke="currentColor" stroke-width="1">
-                                            <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </label>
-
-                                <label for="has-custom-text" class="ms-2 text-sm font-medium">Custom text</label>
-
-                            </div> 
+                <div class="flex flex-col gap-2 bg-white rounded-2xl p-2 mt-5">
+                    
+    
+    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+           type="text" 
+           id="copy-link" 
+           name="copy-link" 
+           value="">
 
 
-                            <div class="mt-6 hidden" id="custom-text-container">
-                                <label for="custom-text-label" class="block mb-2 text-sm font-medium text-gray-900">Add your custom text</label>
-                                <input type="text" id="custom-text-label" class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" value="Custom text">
-                            </div>
-
-                        </div>
-
-                        <div class="border-b border-zinc-200 px-6 py-4">
-                            
-                            <h3 class="text-sm font-medium mb-2">Font Family</h3>
-
-                            <div class="grid grid-cols-4 gap-3 md:grid-cols-6 lg:grid-cols-10">
-                                <button data-font="lato" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/lato.svg" class="w-4/5 mx-auto">
-                                    <div class="text-xxs">Lato</div>
-                                </button>
-                                <button data-font="lora" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/lora.svg" class="w-4/5 mx-auto">
-                                    <div class="text-xxs">Lora</div>
-                                </button>
-                                <button data-font="montserrat" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/montserrat.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Montserrat</div>
-                                    </div>
-                                </button>
-                                <button data-font="open-sans" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square ring-2 ring-indigo-700 ring-offset-2 hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/open-sans.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Open Sans</div>
-                                    </div>
-                                </button>
-                                <button data-font="oswald" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/oswald.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Oswald</div>
-                                    </div>
-                                </button>
-                                <button data-font="playfair-display" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/playfair-display.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Playflair Display</div>
-                                    </div>
-                                </button>
-                                <button data-font="pt-sans" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/pt-sans.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">PT Sans</div>
-                                    </div>
-                                </button>
-                                <button data-font="raleway" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/raleway.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Raleway</div>
-                                    </div>
-                                </button>
-                                <button data-font="roboto" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/roboto.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Roboto</div>
-                                    </div>
-                                </button>
-                                <button data-font="source-sans-pro" class="font-button bg-zinc-50  block py-2 items-center justify-center border border-zinc-300 rounded-xl aspect-square hover:border-zinc-500 transition">
-                                    <img src="../../assets/images/fonts/source-sans-pro.svg" class="w-4/5 mx-auto">
-                                    <div class="flex px-1 text-xxs justify-center">
-                                        <div class="truncate">Source Sans Pro</div>
-                                    </div>
-                                </button>
-                            </div>
-
-                        </div>
-
-                        <div class="border-b border-zinc-200 px-6 py-4">
-
-                            <h3 class="text-sm font-medium mb-2">Text color</h3>
-
-                            <div class="grid grid-cols-6 gap-2 sm:grid-cols-10 md:grid-cols-8 lg:grid-cols-11">
-                                <div data-theme="gray-50" data-theme-fg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-100" data-theme-fg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-200" data-theme-fg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"> </div>
-                                <div data-theme="gray-300" data-theme-fg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-400" data-theme-fg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-500" data-theme-fg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-600" data-theme-fg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-700" data-theme-fg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-800" data-theme-fg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3] ring-2 ring-indigo-700 ring-offset-2"></div>
-                                <div data-theme="gray-900" data-theme-fg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-950" data-theme-fg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="px-6 py-4">
-
-                            <h3 class="text-sm font-medium mb-2">Background color</h3>
-
-                            <div class="grid grid-cols-6 gap-2 sm:grid-cols-10 md:grid-cols-8 lg:grid-cols-11">
-                                <div data-theme="gray-50" data-theme-bg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-100" data-theme-bg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3] ring-2 ring-indigo-700 ring-offset-2"></div>
-                                <div data-theme="gray-200" data-theme-bg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"> </div>
-                                <div data-theme="gray-300" data-theme-bg="d4d4d4" class="bg-[#d4d4d4] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-400" data-theme-bg="a3a3a3" class="bg-[#a3a3a3] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-500" data-theme-bg="737373" class="bg-[#737373] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-600" data-theme-bg="525252" class="bg-[#525252] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-700" data-theme-bg="404040" class="bg-[#404040] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-800" data-theme-bg="262626" class="bg-[#262626] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-900" data-theme-bg="171717" class="bg-[#171717] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></div>
-                                <div data-theme="gray-950" data-theme-bg="0a0a0a" class="bg-[#0a0a0a] hover:border hover:border-zinc-500 transition rounded-lg md:rounded-xl aspect-[4/3]"></button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl flex flex-col md:flex-row flex-wrap gap-2">
-                        <input type="text" id="copy-link" class="text-sm appearance-none border rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-50 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500 flex-1">
-                        <button type="button" id="copy-url-button"  class="text-white bg-indigo-600 hover:bg-indigo-900 focus:ring-2 focus:ring-offset-2  focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm px-5 py-2.5 shadow transition">
-                            Copy url
-                        </button>
-                            
-                    </div>
-
+                    <button type="button" id="copy-url-button"  class="shrink-0 text-white bg-indigo-600 hover:bg-indigo-900 focus:ring-2 focus:ring-offset-2  focus:outline-none focus:ring-indigo-700 font-medium rounded-xl text-sm px-5 py-2.5 shadow transition">
+                        Copy image url
+                    </button>    
                 </div>
 
                 
@@ -312,29 +376,28 @@
             
         </main>
 
-        <div class="flex flex-wrap items-center text-sm text-zinc-400 h-12">
-    <div id="footer_credits" class="w-full sm:w-64 h-full px-2 flex items-center justify-center gap-1 border-t border-white/10 bg-zinc-900">© UIZed by <a href="marco.mtr@gmail.com" class="font-medium text-white hover:underline" target="_blank">Marco Monteiro</a>
+        <div class="flex flex-wrap items-center text-zinc-600 text-xs  bg-gradient-to-t from-zinc-200 to-zinc-100 px-5 py-3 overflow-hidden">
+    
+    <div id="footer_credits" class="flex-1 px-2 flex  gap-1">© UIZed by <a href="marco.mtr@gmail.com" class="font-medium text-zinc-900  hover:underline" target="_blank">Marco Monteiro</a>
     </div>
 
-    <div class="flex-1 flex h-full items-center border-t border-black/10 h-full">
+    <div class="flex-1 flex h-full items-center h-full">
 
-        <div class="flex-1 text-zinc-600 px-6">
-            From a creative to all the others.
+        <div class="flex-1 text-center text-zinc-600 px-6 ">
+            From one creator to the next
         </div>
+    </div>
 
-        <div class="items-end pr-6 text-zinc-900">
+      <div class="flex justify-end flex-1 text-zinc-900">
             <a href="https://www.linkedin.com/in/marcomtr/" target="blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor" width="24" height="24" class="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="#0A66C2" width="24" height="24" class="">
                     <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
                     </svg>
             </a>
         </div>
-    </div>
 </div>
 
         <script src="/js/aspect-ratio-calculator.js"></script>
-
-
     
     </body>
 </html>

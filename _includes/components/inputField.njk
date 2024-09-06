@@ -1,0 +1,12 @@
+{% macro inputField(labelText='', id='', name='', value = '', type = 'text') %}
+    {% if labelText %}
+    <label class="block text-zinc-900 leading-none text-sm font-semibold mb-2" for="{{ id }}">
+        {{ labelText }}
+    </label>
+    {% endif %}
+    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+           type="{{ type }}" 
+           id="{{ id }}" 
+           name="{{ name }}" 
+           value="{{ value }}">
+{% endmacro %}
