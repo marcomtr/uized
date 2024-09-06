@@ -17,7 +17,7 @@ module.exports = {
         xxs: ['0.65rem', { lineHeight: '0.65rem' }],
       },
       gridTemplateColumns: {
-        '16': 'repeat(16, minmax(0, 1fr))',
+        '18': 'repeat(18, minmax(0, 1fr))',
       }
   
     },

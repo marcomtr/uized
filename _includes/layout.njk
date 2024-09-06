@@ -24,13 +24,13 @@ title: Aspect Ratio Calculator
         {% from "components/inputField.njk" import inputField %}
         {% from "components/checkbox.njk" import checkboxField %}
 
-        <div class="fixed top-0 left-0 h-full w-full bg-black/30 z-40 hidden js-overlay"></div>
+        <div class="fixed top-0 left-0 h-full w-full bg-black/70 z-40 hidden js-overlay"></div>
 
         {% include "header.njk" %}
 
         <main class="sm:flex flex-wrap justify-between sm:gap-2 lg:gap-5 flex-1 p-2 lg:p-5 max-w-[90rem] mx-auto w-full">
 
-            <aside class="fixed top-0 left-0 h-full lg:relative lg:h-auto w-full lg:w-72 text-zinc-900 z-50 lg:block transition-all duration-300 -translate-x-full opacity-0 lg:opacity-100 lg:translate-x-0 js-menu">
+            <aside class="fixed top-0 left-0 h-full lg:relative lg:h-auto w-3/4 lg:w-72 text-zinc-900 z-50 lg:block transition-all duration-300 -translate-x-full opacity-0 lg:opacity-100 lg:translate-x-0 js-menu">
 
 
                 <div class="flex items-center gap-3 px-3 lg:px-5 h-14 bg-zinc-900 z-50 lg:hidden">
@@ -110,7 +110,7 @@ title: Aspect Ratio Calculator
                                     
                                     <h3 class="text-sm font-medium mb-2">Font Family</h3>
 
-                                    <div class="grid grid-cols-7 gap-3 sm:grid-cols-4 md:grid-cols-10 lg:grid-cols-7 xl:grid-cols-10">
+                                    <div class="grid grid-cols-6 gap-3 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10">
                                         <button data-font="lato" class="font-button bg-zinc-100 block py-2 items-center justify-center rounded-xl aspect-square hover:border-zinc-500 transition">
                                             <img src="../../assets/images/fonts/lato.svg" class="w-3/5 mx-auto">
                                             <div class="text-xxs hidden  text-zinc-900 font-semibold mt-1">Lato</div>
@@ -175,7 +175,7 @@ title: Aspect Ratio Calculator
 
                                     <h3 class="text-sm font-medium mb-2">Text color</h3>
 
-                                    <div class="grid grid-cols-7 gap-2 sm:grid-cols-11 xl:grid-cols-16">
+                                    <div class="grid grid-cols-7 gap-2 sm:grid-cols-11 xl:grid-cols-18">
                                         <button data-theme="gray-50" data-theme-fg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-lg aspect-square"></button>
                                         <button data-theme="gray-100" data-theme-fg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 transition rounded-lg aspect-square"></button>
                                         <button data-theme="gray-200" data-theme-fg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-lg aspect-square"> </button>
@@ -195,7 +195,7 @@ title: Aspect Ratio Calculator
 
                                     <h3 class="text-sm font-medium mb-2">Background color</h3>
 
-                                    <div class="grid grid-cols-8 gap-2 sm:grid-cols-11 xl:grid-cols-16">
+                                    <div class="grid grid-cols-7 gap-2 sm:grid-cols-11 xl:grid-cols-18">
                                         <button data-theme="gray-50" data-theme-bg="fafafa" class="bg-[#fafafa] border border-zinc-200 transition hover:border-zinc-500 rounded-lg aspect-square"></button>
                                         <button data-theme="gray-100" data-theme-bg="f5f5f5" class="bg-[#f5f5f5] border border-zinc-200 hover:border-zinc-500 hover:border hover:border-zinc-500 transition rounded-lg aspect-square ring-2 ring-indigo-700 ring-offset-2"></button>
                                         <button data-theme="gray-200" data-theme-bg="e5e5e5" class="bg-[#e5e5e5] hover:border hover:border-zinc-500 transition rounded-lg aspect-square"> </button>
