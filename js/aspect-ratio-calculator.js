@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
  
     document.querySelector('.js-menu-toggle').addEventListener('click', toggleMenu);
     document.querySelector('.js-menu-toggle-close').addEventListener('click', toggleMenu);
+    document.querySelector('.js-overlay').addEventListener('click', toggleMenu);
 
 
     // Delay the display of the image placeholder by 1 second
