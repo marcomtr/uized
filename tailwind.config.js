@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './aspect-ratio-calculator/*.njk',
     './_includes/*.njk',
+    './_includes/components/*.njk',
     './js/*.js}',
     './index.njk',
   ],

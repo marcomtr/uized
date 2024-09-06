@@ -1,7 +1,7 @@
 {% macro checkboxField(labelText, id, isChecked = false) %}
     <label class="relative flex items-center rounded-full cursor-pointer" for="{{ id }}">
         <input type="checkbox" id="{{ id }}" 
-               class="before:content[''] peer relative w-5 h-5 cursor-pointer appearance-none rounded-md border border-zinc-300 hover:border-zinc-500 transition-all checked:border-indigo-700 hover:checked:border-transparent checked:bg-indigo-700 shrink-0"
+               class="before:content[''] peer relative w-5 h-5 cursor-pointer appearance-none rounded-md bg-zinc-100 border border-zinc-200 transition-all checked:border-indigo-700 hover:checked:border-transparent checked:bg-indigo-700 shrink-0"
                {% if isChecked %} checked {% endif %} />
         <span class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
@@ -10,5 +10,5 @@
         </span>
     </label>
 
-    <label for="{{ id }}" class="ms-2 text-sm font-medium">{{ labelText }}</label>
+    <label for="{{ id }}" class="ms-2 text-sm font-medium w-full">{{ labelText }}</label>
 {% endmacro %}

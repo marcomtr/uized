@@ -95,7 +95,7 @@
                 
 
 
-                <ul class="text-sm p-2 bg-white text-zinc-700 lg:rounded-2xl h-full lg:h-auto overflow-auto pb-16 lg:pb-0">
+                <ul class="text-sm p-2 bg-white text-zinc-700 lg:rounded-2xl h-full lg:h-auto overflow-auto pb-16 lg:pb-0 ">
                     <li class="nav-item"><a href="/aspect-ratio-calculator/" class="block px-3 py-2 rounded-lg ">Aspect Ratio Calculator</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/16-9/" class="block px-3 py-2 rounded-lg ">16:9 Widescreen</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/9-16/" class="block px-3 py-2 rounded-lg ">9:16 Vertical</a></li>
@@ -121,7 +121,7 @@
 
                         
 
-                        <form id="aspect-form" class="bg-white p-4 md:p-6 mb-6 rounded-2xl"> 
+                        <form id="aspect-form" class="bg-white p-4 mb-2 lg:p-6 lg:mb-6 rounded-2xl"> 
                             <div class="flex flex-wrap gap-3" >
                                 <div class="flex-1 mb-6">
                                     
@@ -130,7 +130,7 @@
         Ratio Width
     </label>
     
-    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+    <input class="bg-zinc-100  border-0 text-zinc-700 text-sm rounded-lg  focus:ring-2 focus:ring-indigo-700 focus:ring-inset focus:bg-zinc-100 focus:outline-0 block w-full p-2.5" 
            type="number" 
            id="ratio-width" 
            name="ratio-width" 
@@ -144,7 +144,7 @@
         Ratio Height
     </label>
     
-    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+    <input class="bg-zinc-100  border-0 text-zinc-700 text-sm rounded-lg  focus:ring-2 focus:ring-indigo-700 focus:ring-inset focus:bg-zinc-100 focus:outline-0 block w-full p-2.5" 
            type="number" 
            id="ratio-height" 
            name="ratio-height" 
@@ -160,7 +160,7 @@
         Pixel Width
     </label>
     
-    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+    <input class="bg-zinc-100  border-0 text-zinc-700 text-sm rounded-lg  focus:ring-2 focus:ring-indigo-700 focus:ring-inset focus:bg-zinc-100 focus:outline-0 block w-full p-2.5" 
            type="number" 
            id="pixel-width" 
            name="pixel-width" 
@@ -174,7 +174,7 @@
         Pixel Height
     </label>
     
-    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+    <input class="bg-zinc-100  border-0 text-zinc-700 text-sm rounded-lg  focus:ring-2 focus:ring-indigo-700 focus:ring-inset focus:bg-zinc-100 focus:outline-0 block w-full p-2.5" 
            type="number" 
            id="pixel-height" 
            name="pixel-height" 
@@ -188,13 +188,13 @@
                                         
                             <div id="template-options" class="bg-white rounded-xl">
 
-                                <div class="border-b border-zinc-200 px-6 py-4">
+                                <div class="border-b border-zinc-200 px-6 py-3.5">
 
-                                    <div class="inline-flex items-center">
+                                    <div class="flex items-center">
                                         
     <label class="relative flex items-center rounded-full cursor-pointer" for="has-custom-text">
         <input type="checkbox" id="has-custom-text" 
-               class="before:content[''] peer relative w-5 h-5 cursor-pointer appearance-none rounded-md border border-zinc-300 hover:border-zinc-500 transition-all checked:border-indigo-700 hover:checked:border-transparent checked:bg-indigo-700 shrink-0"
+               class="before:content[''] peer relative w-5 h-5 cursor-pointer appearance-none rounded-md bg-zinc-100 border border-zinc-200 transition-all checked:border-indigo-700 hover:checked:border-transparent checked:bg-indigo-700 shrink-0"
                 />
         <span class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
@@ -203,7 +203,7 @@
         </span>
     </label>
 
-    <label for="has-custom-text" class="ms-2 text-sm font-medium">Custom text</label>
+    <label for="has-custom-text" class="ms-2 text-sm font-medium w-full">Custom text</label>
 
                                     </div> 
 
@@ -348,7 +348,7 @@
                 <div class="flex flex-col gap-2 bg-white rounded-2xl p-2 mt-5">
                     
     
-    <input class="text-sm appearance-none rounded-xl w-full py-2 px-3 h-10 text-zinc-700 leading-none bg-zinc-100 focus:bg-white border-zinc-300 focus:outline-indigo-600 focus:shadow-outline hover:border-zinc-500" 
+    <input class="bg-zinc-100  border-0 text-zinc-700 text-sm rounded-lg  focus:ring-2 focus:ring-indigo-700 focus:ring-inset focus:bg-zinc-100 focus:outline-0 block w-full p-2.5" 
            type="text" 
            id="copy-link" 
            name="copy-link" 

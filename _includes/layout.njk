@@ -52,7 +52,7 @@ title: Aspect Ratio Calculator
                 </button> #}
 
 
-                <ul class="text-sm p-2 bg-white text-zinc-700 lg:rounded-2xl h-full lg:h-auto overflow-auto pb-16 lg:pb-0">
+                <ul class="text-sm p-2 bg-white text-zinc-700 lg:rounded-2xl h-full lg:h-auto overflow-auto pb-16 lg:pb-0 ">
                 {%- for entry in collections.all | eleventyNavigation %}
                     <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} class="block px-3 py-2 rounded-lg {% if entry.url == page.url %}bg-zinc-100 text-zinc-900 font-bold{% endif %}">{{ entry.title }}</a></li>
                 {%- endfor %}
@@ -70,7 +70,7 @@ title: Aspect Ratio Calculator
                             <h2 class="mb-6 text-lg md:text-lg font-bold">{{ title }}</h2>
                         </div> #}
 
-                        <form id="aspect-form" class="bg-white p-4 md:p-6 mb-6 rounded-2xl"> 
+                        <form id="aspect-form" class="bg-white p-4 mb-2 lg:p-6 lg:mb-6 rounded-2xl"> 
                             <div class="flex flex-wrap gap-3" >
                                 <div class="flex-1 mb-6">
                                     {{ inputField('Ratio Width', 'ratio-width', 'ratio-width', ratioWidth, 'number') }}
@@ -93,9 +93,9 @@ title: Aspect Ratio Calculator
                                         
                             <div id="template-options" class="bg-white rounded-xl">
 
-                                <div class="border-b border-zinc-200 px-6 py-4">
+                                <div class="border-b border-zinc-200 px-6 py-3.5">
 
-                                    <div class="inline-flex items-center">
+                                    <div class="flex items-center">
                                         {{ checkboxField('Custom text', 'has-custom-text', false) }}
                                     </div> 
 
