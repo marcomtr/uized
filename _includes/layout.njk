@@ -28,17 +28,17 @@ title: Aspect Ratio Calculator
 
         {% include "header.njk" %}
 
-        <main class="sm:flex flex-wrap justify-between gap-10 gap-5 lg:gap-5 flex-1 p-5 max-w-[90rem] mx-auto w-full">
+        <main class="sm:flex flex-wrap justify-between lg:gap-5 flex-1 p-2 lg:p-5 max-w-[90rem] mx-auto w-full">
 
-            <aside class="fixed top-0 h-full lg:relative lg:h-auto w-56 lg:w-72 text-zinc-900 z-50 lg:block transition-all duration-300 -translate-x-full opacity-0 lg:opacity-100 lg:translate-x-0 js-menu">
+            <aside class="fixed top-0 left-0 h-full lg:relative lg:h-auto w-full lg:w-72 text-zinc-900 z-50 lg:block transition-all duration-300 -translate-x-full opacity-0 lg:opacity-100 lg:translate-x-0 js-menu">
 
 
-                <div class="flex items-center gap-3 px-5 h-14 bg-zinc-900 z-50 lg:hidden">
+                <div class="flex items-center gap-3 px-3 lg:px-5 h-14 bg-zinc-900 z-50 lg:hidden">
                     {% set locatedInSidebar = true %} 
                     {% include "logo.njk" %}
                 </div>
 
-                <button class="flex w-full justify-between items-center bg-white font-bold text-sm py-2.5 px-5 rounded-2xl">
+                {# <button class="flex w-full justify-between items-center bg-white font-bold text-sm py-2.5 px-5 rounded-2xl">
                     Aspect ratio calculator
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_197_200" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -49,10 +49,10 @@ title: Aspect Ratio Calculator
                         </g>
                     </svg>
 
-                </button>
+                </button> #}
 
 
-                <ul class="text-sm p-2 bg-white text-zinc-700 rounded-2xl mt-3">
+                <ul class="text-sm p-2 bg-white text-zinc-700 lg:rounded-2xl h-full lg:h-auto overflow-auto pb-16 lg:pb-0">
                 {%- for entry in collections.all | eleventyNavigation %}
                     <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} class="block px-3 py-2 rounded-lg {% if entry.url == page.url %}bg-zinc-100 text-zinc-900 font-bold{% endif %}">{{ entry.title }}</a></li>
                 {%- endfor %}

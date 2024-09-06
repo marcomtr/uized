@@ -23,9 +23,9 @@
 
         <div class="fixed top-0 left-0 h-full w-full bg-black/30 z-40 hidden js-overlay"></div>
 
-        <header class="flex justify-between items-center px-5 h-14 bg-zinc-900 shrink-0">
+        <header class="flex justify-between items-center px-3 lg:px-5 h-14 bg-zinc-900 shrink-0">
 
-    <div class="flex flex-1 items-center gap-3 w-full lg:w-auto js-menu-toggle">
+    <div class="flex flex-1 items-center lg:gap-3 w-full lg:w-auto js-menu-toggle">
 
     
 
@@ -42,7 +42,7 @@
     </button>
     
 
-    <a href="/" class="items-center flex justify-center pr-10 lg:block lg:pr-0">
+    <a href="/" class="items-center flex justify-center lg:block">
         <img src="../../assets/images/logo.png" class="w-14">
     </a>
 
@@ -52,7 +52,7 @@
         <h1 class="text-white/95">2.39:1 CinemaScope</h1>
     </div>
  
-    <nav class="flex flex-col items-end flex-1 gap-2 lg:flex">
+    <nav class="flex flex-col items-end lg:flex-1 gap-2 lg:flex">
         <a href="https://buymeacoffee.com/marcomonteiro" target="blank" class="flex gap-2 items-center bg-white/10 text-white/95 text-sm px-5 h-10 leading-none font-medium rounded-xl">
             <img src="../../assets/images/heart.png" class="w-5">
             Buy me a coffee
@@ -61,14 +61,14 @@
 
 </header>
 
-        <main class="sm:flex flex-wrap justify-between gap-10 gap-5 lg:gap-5 flex-1 p-5 max-w-[90rem] mx-auto w-full">
+        <main class="sm:flex flex-wrap justify-between lg:gap-5 flex-1 p-2 lg:p-5 max-w-[90rem] mx-auto w-full">
 
-            <aside class="fixed top-0 h-full lg:relative lg:h-auto w-56 lg:w-72 text-zinc-900 z-50 lg:block transition-all duration-300 -translate-x-full opacity-0 lg:opacity-100 lg:translate-x-0 js-menu">
+            <aside class="fixed top-0 left-0 h-full lg:relative lg:h-auto w-full lg:w-72 text-zinc-900 z-50 lg:block transition-all duration-300 -translate-x-full opacity-0 lg:opacity-100 lg:translate-x-0 js-menu">
 
 
-                <div class="flex items-center gap-3 px-5 h-14 bg-zinc-900 z-50 lg:hidden">
+                <div class="flex items-center gap-3 px-3 lg:px-5 h-14 bg-zinc-900 z-50 lg:hidden">
                      
-                    <div class="flex flex-1 items-center gap-3 w-full lg:w-auto js-menu-toggle">
+                    <div class="flex flex-1 items-center lg:gap-3 w-full lg:w-auto js-menu-toggle">
 
     
     <button type="button" class="mr-2 js-menu-toggle-close">
@@ -85,28 +85,17 @@
 
     
 
-    <a href="/" class="items-center flex justify-center pr-10 lg:block lg:pr-0">
+    <a href="/" class="items-center flex justify-center lg:block">
         <img src="../../assets/images/logo.png" class="w-14">
     </a>
 
 </div>
                 </div>
 
-                <button class="flex w-full justify-between items-center bg-white font-bold text-sm py-2.5 px-5 rounded-2xl">
-                    Aspect ratio calculator
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_197_200" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                        <rect width="24" height="24" fill="#D9D9D9"/>
-                        </mask>
-                        <g mask="url(#mask0_197_200)">
-                        <path d="M12 14.95C11.8667 14.95 11.7417 14.9292 11.625 14.8875C11.5083 14.8458 11.4 14.775 11.3 14.675L6.69999 10.075C6.51665 9.89166 6.42082 9.66249 6.41249 9.38749C6.40415 9.11249 6.49999 8.87499 6.69999 8.67499C6.88332 8.49166 7.11665 8.39999 7.39999 8.39999C7.68332 8.39999 7.91665 8.49166 8.09999 8.67499L12 12.55L15.9 8.67499C16.0833 8.49166 16.3125 8.39583 16.5875 8.38749C16.8625 8.37916 17.1 8.47499 17.3 8.67499C17.4833 8.85833 17.575 9.09166 17.575 9.37499C17.575 9.65833 17.4833 9.89166 17.3 10.075L12.7 14.675C12.6 14.775 12.4917 14.8458 12.375 14.8875C12.2583 14.9292 12.1333 14.95 12 14.95Z" fill="black" fill-opacity="0.94"/>
-                        </g>
-                    </svg>
-
-                </button>
+                
 
 
-                <ul class="text-sm p-2 bg-white text-zinc-700 rounded-2xl mt-3">
+                <ul class="text-sm p-2 bg-white text-zinc-700 lg:rounded-2xl h-full lg:h-auto overflow-auto pb-16 lg:pb-0">
                     <li class="nav-item"><a href="/aspect-ratio-calculator/" class="block px-3 py-2 rounded-lg ">Aspect Ratio Calculator</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/16-9/" class="block px-3 py-2 rounded-lg ">16:9 Widescreen</a></li>
                     <li class="nav-item"><a href="/aspect-ratio-calculator/9-16/" class="block px-3 py-2 rounded-lg ">9:16 Vertical</a></li>
