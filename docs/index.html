@@ -17,23 +17,12 @@
     </head>
     <body class="bg-zinc-200 text-zinc-900 flex flex-col h-full">
 
+        <div class="fixed top-0 left-0 h-full w-full bg-black/70 z-40 hidden js-overlay"></div>
+
         <header class="flex justify-between items-center px-3 lg:px-5 h-14 bg-zinc-900 shrink-0">
 
     <div class="flex flex-1 items-center lg:gap-3 w-full lg:w-auto js-menu-toggle">
 
-    
-
-    
-    <button type="button" class="mr-4 lg:hidden js-menu-toggle-open">
-            <svg width="24" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <mask id="mask0_167_173" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="40">
-            <rect x="0.1875" width="40" height="40" fill="#D9D9D9"/>
-            </mask>
-            <g mask="url(#mask0_167_173)">
-            <path d="M5.46539 29.7779V27.1387H34.9096V29.7779H5.46539ZM5.46539 21.3054V18.6667H34.9096V21.3054H5.46539ZM5.46539 12.8333V10.1946H34.9096V12.8333H5.46539Z" fill="white"/>
-            </g>
-            </svg>
-    </button>
     
 
     <a href="/" class="items-center flex justify-center lg:block">
@@ -55,12 +44,30 @@
 
 </header>
 
-        <div class="flex flex-1 flex-col h-full">
-            
-<h1>Tools</h1>
+        <main class="flex flex-col sm:gap-2 lg:gap-5 flex-1 p-2 lg:p-5 max-w-[90rem] mx-auto w-full">
 
-<a href="aspect-ratio-calculator/16-9/">Aspect Ratio Calculator</a>
+            <div>
+
+            
+
+
+<div class="grid grid-cols-4 gap-4">
+
+    <a href="aspect-ratio-calculator/" class="max-w-sm bg-white border border-gray-200 rounded-2xl">
+        <img class="rounded-t-lg" src="../../assets/images/aspect-ratio-logo.png" alt="" />
+        
+        <div class="p-5">
+            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900">Aspect Ratio Calculator</h5>
+            <p class="mb-3 font-normal text-zinc-700">This tool not only helps you calculate aspect ratios and pixel dimensions but also creates custom image placeholders</p>
         </div>
+    </a>
+
+</div>
+
+
+            </div>
+
+        </main>
 
         <div class="flex flex-col gap-1 lg:flex-row  items-center text-zinc-600 text-sm lg:text-xs  bg-gradient-to-t from-zinc-200 to-zinc-100 px-5 py-3 mt-10">
     

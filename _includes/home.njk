@@ -20,11 +20,19 @@ title: Home
     </head>
     <body class="bg-zinc-200 text-zinc-900 flex flex-col h-full">
 
+        <div class="fixed top-0 left-0 h-full w-full bg-black/70 z-40 hidden js-overlay"></div>
+
         {% include "header.njk" %}
 
-        <div class="flex flex-1 flex-col h-full">
+        <main class="flex flex-col sm:gap-2 lg:gap-5 flex-1 p-2 lg:p-5 max-w-[90rem] mx-auto w-full">
+
+            <div>
+
             {{ content | safe }}
-        </div>
+
+            </div>
+
+        </main>
 
         {% include "footer.njk" %}
     
