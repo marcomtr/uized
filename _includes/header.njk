@@ -2,9 +2,11 @@
 
     {% include "logo.njk" %}
 
+    {% if tag !== 'home' %}
     <div class="flex-1 items-center justify-center hidden lg:flex flex-col">
         <h1 class="text-white/95">{{ title }}</h1>
     </div>
+    {% endif %}
  
     <nav class="flex flex-col items-end lg:flex-1 gap-2 lg:flex">
         <a href="https://buymeacoffee.com/marcomonteiro" target="blank" class="flex gap-2 items-center bg-white/10 text-white/95 text-xs lg:text-sm px-3 lg:px-5 h-9 lg:h-10 leading-none font-medium rounded-xl">
