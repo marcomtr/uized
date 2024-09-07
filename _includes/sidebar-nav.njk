@@ -20,7 +20,7 @@
     </button> #}
 
 
-    <ul class="text-sm p-2 bg-white text-zinc-700 lg:rounded-2xl h-full lg:h-auto overflow-auto pb-16 lg:pb-0 ">
+    <ul class="text-sm p-2 bg-white text-zinc-700 lg:rounded-2xl h-full lg:h-auto overflow-auto pb-16 lg:pb-2 ">
     {%- for entry in collections.all | eleventyNavigation %}
         <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} class="block px-3 py-2 rounded-lg {% if entry.url == page.url %}bg-zinc-100 text-zinc-900 font-bold{% endif %}">{{ entry.title }}</a></li>
     {%- endfor %}

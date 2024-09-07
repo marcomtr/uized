@@ -1534,6 +1534,10 @@ video {
     padding-bottom: 0px;
   }
 
+  .lg\:pb-2 {
+    padding-bottom: 0.5rem;
+  }
+
   .lg\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
