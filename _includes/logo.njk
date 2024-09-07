@@ -1,6 +1,5 @@
-<div class="flex flex-1 items-center lg:gap-3 w-full lg:w-auto js-menu-toggle">
+<div class="flex flex-1 items-center lg:gap-3 w-full lg:w-auto ">
 
-    {% if title != "Home" %}
 
         {% if locatedInSidebar %}
         <button type="button" class="mr-4 js-menu-toggle-close">
@@ -16,7 +15,7 @@
         {% endif %}
 
         {% if not locatedInSidebar %}
-        <button type="button" class="mr-4 lg:hidden js-menu-toggle-open">
+        <button type="button" class="mr-4 lg:hidden js-menu-toggle">
                 <svg width="24" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_167_173" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="40">
                 <rect x="0.1875" width="40" height="40" fill="#D9D9D9"/>
@@ -28,7 +27,6 @@
         </button>
         {% endif %}
 
-    {% endif %}
 
     <a href="/" class="items-center flex justify-center lg:block">
         <img src="../../assets/images/logo.png" class="w-14">

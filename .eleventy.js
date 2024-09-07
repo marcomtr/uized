@@ -8,10 +8,9 @@ module.exports = function (eleventyConfig) {
         "style.out.css": "style.css",
     });
     eleventyConfig.addPassthroughCopy("assets/**/*.{svg,png}");
-    eleventyConfig.addPassthroughCopy(
-        "js/aspect-ratio-calculator.js"
-    );
-    
+    eleventyConfig.addPassthroughCopy("js/aspect-ratio-calculator.js");
+    eleventyConfig.addPassthroughCopy("js/app.js");
+
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 

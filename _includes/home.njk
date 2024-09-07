@@ -26,7 +26,12 @@ title: Home
 
         <main class="flex flex-col sm:gap-2 lg:gap-5 flex-1 p-2 lg:p-5 max-w-[90rem] mx-auto w-full">
 
+            <div class="lg:hidden">
+            {% include "sidebar-nav.njk" %}
+            </div>
+
             <div>
+                
 
             {{ content | safe }}
 
@@ -35,6 +40,8 @@ title: Home
         </main>
 
         {% include "footer.njk" %}
-    
+
+        <script src="/js/app.js"></script>
+
     </body>
 </html>
