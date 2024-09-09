@@ -2,19 +2,23 @@
 layout: home.njk
 tag: home
 title: Tools for designers and developers
-description: Check out the cool tools from UIZED! Right now, we've got an Aspect Ratio Calculator to help you get those perfect image sizes. And that's just the start — stay tuned for more awesome tools coming your way soon!
+description: Check out the tools from UIZED! Right now, we've got an Aspect Ratio Calculator to help you get those perfect image sizes. And that's just the start — stay tuned for more awesome tools coming your way soon!
 ---
 
-{# <h1>Tools</h1> #}
+<div class="text-center py-10">
+    <h1 class="text-6xl font-semibold">Some of our Tools</h1>
+    <p class="text-lg font-medium py-3">Tools for designers and developers. More to come.</p>
+</div>
+
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
-    <a href="aspect-ratio-calculator/16-9" class="max-w-sm bg-white rounded-2xl py-5">
-        <div class="flex gap-4 mx-5">
-            <img src="../../assets/images/aspect-ratio-logo.png" class="grow-0 shrink-0 h-16 rounded-xl" alt="" />
-            <div class="flex flex-col gap-1">
+    <a href="aspect-ratio-calculator/16-9" class="max-w-sm bg-white rounded-2xl pt-6 pb-10">
+        <div class="flex flex-col gap-4 mx-5 items-center">
+            <img src="../../assets/images/aspect-ratio-logo.png" class="grow-0 shrink-0 rounded-full w-20" alt="" />
+            <div class="flex flex-col gap-1 text-center">
                 <h5 class="text-xl font-bold tracking-tight text-gray-900">Aspect Ratio Calculator</h5>
-                <p class=" font-normal text-xs text-zinc-700">This tool not only helps you calculate aspect ratios and pixel dimensions but also creates custom image placeholders</p>
+                <p class=" font-normal text-zinc-500">This tool not only helps you calculate aspect ratios and pixel dimensions but also creates custom image placeholders</p>
             </div>
         </div>
     
