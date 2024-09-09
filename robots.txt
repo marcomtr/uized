@@ -1,4 +1,3 @@
 Sitemap: https://www.uized.com/sitemap.xml
 
 User-agent: *
-Disallow:
