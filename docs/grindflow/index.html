@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+        <title>Grindflow - Aspect Ratio Calculator & Image Placeholder</title>
+
+        <meta name="description" content="">
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://uized.com/grindflow/">
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/images/favicon/favicon.png">
+        <link rel="apple-touch-icon" href="../../assets/images/favicon/apple-touch-icon.png" sizes="180x180">
+
+        <link rel="stylesheet" href="../../style.out.css" />
+        
+    </head>
+    <body class="bg-zinc-100 text-zinc-900 flex flex-col h-full">
+
+        <header class="flex justify-between items-center px-3 lg:px-5 h-14 bg-zinc-900 shrink-0">
+
+    <div class="flex flex-1 items-center lg:gap-3 w-full lg:w-auto ">
+
+
+        
+
+        
+        <button type="button" class="mr-4 lg:hidden js-menu-toggle">
+                <svg width="24" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_167_173" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="40">
+                <rect x="0.1875" width="40" height="40" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_167_173)">
+                <path d="M5.46539 29.7779V27.1387H34.9096V29.7779H5.46539ZM5.46539 21.3054V18.6667H34.9096V21.3054H5.46539ZM5.46539 12.8333V10.1946H34.9096V12.8333H5.46539Z" fill="white"/>
+                </g>
+                </svg>
+        </button>
+        
+
+
+    <a href="/" class="items-center flex justify-center lg:block">
+        <img src="../../assets/images/logo.png" class="w-14">
+    </a>
+
+</div>
+
+    
+    <div class="flex-1 items-center justify-center hidden lg:flex flex-col">
+        <h1 class="text-white/95">Grindflow</h1>
+    </div>
+    
+ 
+    <nav class="flex flex-col items-end lg:flex-1 gap-2 lg:flex">
+        <a href="https://buymeacoffee.com/marcomonteiro" target="blank" class="flex gap-2 items-center bg-white/10 text-white/95 text-xs lg:text-sm px-3 lg:px-5 h-9 lg:h-10 leading-none font-medium rounded-xl">
+            <img src="../../assets/images/heart.png" class="w-5">
+            Buy me a coffee
+        </a>
+    </nav>
+
+</header>
+
+
+        
+<style>
+
+   .progress-ring__circle {
+        transition: stroke-dashoffset 0.35s;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+        stroke-dasharray: 596.903;
+        stroke-dashoffset: 596.903;
+    }
+</style>
+
+ <div class="mx-auto py-10 w-full ">
+
+    <div class="bg-white mx-auto rounded-2xl max-w-96 mb-3 flex  gap-5 p-3 items-end">
+         <div>
+             <button class="bg-zinc-100 w-10 h-10 rounded-full flex flex-col justify-center items-center">
+             <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_357_2352" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_357_2352)">
+                <path d="M6.5 13C6.21667 13 5.97917 12.9042 5.7875 12.7125C5.59583 12.5208 5.5 12.2833 5.5 12C5.5 11.7167 5.59583 11.4792 5.7875 11.2875C5.97917 11.0958 6.21667 11 6.5 11H18.5C18.7833 11 19.0208 11.0958 19.2125 11.2875C19.4042 11.4792 19.5 11.7167 19.5 12C19.5 12.2833 19.4042 12.5208 19.2125 12.7125C19.0208 12.9042 18.7833 13 18.5 13H6.5Z" fill="#1C1B1F"/>
+                </g>
+                </svg>
+
+
+            </button>
+        </div>
+
+        <div class="flex-1">
+            <label for="sessionCount">Sessions</label>
+            <input type="number" id="sessionCount" value="4" min="1" class="border p-1 w-full">
+        </div>
+
+        
+        <div>
+             <button class="bg-zinc-100 w-10 h-10 rounded-full flex flex-col justify-center items-center">
+               <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_357_2342" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                    <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_357_2342)">
+                    <path d="M11.5 13H6.5C6.21667 13 5.97917 12.9042 5.7875 12.7125C5.59583 12.5208 5.5 12.2833 5.5 12C5.5 11.7167 5.59583 11.4792 5.7875 11.2875C5.97917 11.0958 6.21667 11 6.5 11H11.5V6C11.5 5.71667 11.5958 5.47917 11.7875 5.2875C11.9792 5.09583 12.2167 5 12.5 5C12.7833 5 13.0208 5.09583 13.2125 5.2875C13.4042 5.47917 13.5 5.71667 13.5 6V11H18.5C18.7833 11 19.0208 11.0958 19.2125 11.2875C19.4042 11.4792 19.5 11.7167 19.5 12C19.5 12.2833 19.4042 12.5208 19.2125 12.7125C19.0208 12.9042 18.7833 13 18.5 13H13.5V18C13.5 18.2833 13.4042 18.5208 13.2125 18.7125C13.0208 18.9042 12.7833 19 12.5 19C12.2167 19 11.9792 18.9042 11.7875 18.7125C11.5958 18.5208 11.5 18.2833 11.5 18V13Z" fill="#1C1B1F"/>
+                    </g>
+                    </svg>
+
+
+            </button>
+        </div>
+
+    </div>
+
+    <div class="bg-white mx-auto rounded-2xl max-w-96 mb-3">
+        <label for="focusTime">Duration of Focus Sessions (MM:SS):</label>
+        <input type="text" id="focusTime" value="00:10" class="border p-1" placeholder="MM:SS">
+    </div>
+
+
+    <div class="bg-white mx-auto rounded-2xl max-w-96 mb-3">
+        <label for="breakTime">Duration of Break Sessions (MM:SS):</label>
+        <input type="text" id="breakTime" value="00:10" class="border p-1" placeholder="MM:SS">
+    </div>
+
+    <div class="bg-white mx-auto rounded-2xl max-w-96 overflow-hidden flex flex-col gap-3">
+        <div class="relative mt-5 mx-10">
+            <svg class="w-full h-full" viewBox="0 0 200 200">
+                <!-- Background circle -->
+                <circle
+                    class="text-gray-100 stroke-current"
+                    stroke-width="10"
+                    cx="100"
+                    cy="100"
+                    r="95"
+                    fill="transparent"
+                ></circle>
+                <!-- Progress circle -->
+                <circle
+                    class="text-black progress-ring__circle stroke-current"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                    cx="100"
+                    cy="100"
+                    r="95"
+                    fill="transparent"
+                ></circle>
+            </svg>
+
+            <div class="absolute left-0 top-0 flex flex-col justify-center items-center w-full h-full p-16 gap-4" data-total-time="5" data-progress="85" data-timer="00:10">
+                <div class="text-sm font-bold js-total-time">1 MIN</div>
+                <div class="text-7xl font-black js-time-left">00:10</div>
+                <div class="text-sm font-bold py-1.5 pl-3 pr-4 bg-zinc-100 rounded-lg flex items-center ">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_325_2031" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="17" height="16">
+                            <rect x="0.5" width="16" height="16" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_325_2031)">
+                            <path d="M7.83336 9.66665L3.88336 9.16665C3.60559 9.13331 3.42503 8.98331 3.3417 8.71665C3.25836 8.44998 3.3167 8.2222 3.5167 8.03331L10.3334 1.49998C10.3889 1.44442 10.4556 1.40276 10.5334 1.37498C10.6111 1.3472 10.7167 1.33331 10.85 1.33331C11.0723 1.33331 11.2417 1.42776 11.3584 1.61665C11.475 1.80554 11.4778 1.99998 11.3667 2.19998L9.1667 6.33331L13.1167 6.83331C13.3945 6.86665 13.575 7.01665 13.6584 7.28331C13.7417 7.54998 13.6834 7.77776 13.4834 7.96665L6.6667 14.5C6.61114 14.5555 6.54447 14.5972 6.4667 14.625C6.38892 14.6528 6.28336 14.6666 6.15003 14.6666C5.92781 14.6666 5.75836 14.5722 5.6417 14.3833C5.52503 14.1944 5.52225 14 5.63336 13.8L7.83336 9.66665Z" fill="#1C1B1F"/>
+                        </g>
+                    </svg>
+                    <span id="timer-state">FOCUS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 flex-wrap js-session-dots min-h-4">
+           
+        </div>
+
+        <div class="flex items-center justify-center gap-2">
+
+             <button id="resetTimer" class="bg-white w-10 h-10 rounded-full flex flex-col justify-center items-center">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_296_1518" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                    <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_296_1518)">
+                        <path d="M10.325 20.7C8.60833 20.2167 7.20833 19.2708 6.125 17.8625C5.04167 16.4542 4.5 14.8333 4.5 13C4.5 12.05 4.65833 11.1458 4.975 10.2875C5.29167 9.42917 5.74167 8.64167 6.325 7.925C6.50833 7.725 6.73333 7.62084 7 7.6125C7.26667 7.60417 7.50833 7.70834 7.725 7.925C7.90833 8.10834 8.00417 8.33334 8.0125 8.6C8.02083 8.86667 7.93333 9.11667 7.75 9.35C7.35 9.86667 7.04167 10.4333 6.825 11.05C6.60833 11.6667 6.5 12.3167 6.5 13C6.5 14.35 6.89583 15.5542 7.6875 16.6125C8.47917 17.6708 9.5 18.3917 10.75 18.775C10.9667 18.8417 11.1458 18.9667 11.2875 19.15C11.4292 19.3333 11.5 19.5333 11.5 19.75C11.5 20.0833 11.3833 20.3458 11.15 20.5375C10.9167 20.7292 10.6417 20.7833 10.325 20.7ZM14.675 20.7C14.3583 20.7833 14.0833 20.725 13.85 20.525C13.6167 20.325 13.5 20.0583 13.5 19.725C13.5 19.525 13.5708 19.3333 13.7125 19.15C13.8542 18.9667 14.0333 18.8417 14.25 18.775C15.5 18.375 16.5208 17.65 17.3125 16.6C18.1042 15.55 18.5 14.35 18.5 13C18.5 11.3333 17.9167 9.91667 16.75 8.75C15.5833 7.58334 14.1667 7 12.5 7H12.425L12.825 7.4C13.0083 7.58334 13.1 7.81667 13.1 8.1C13.1 8.38334 13.0083 8.61667 12.825 8.8C12.6417 8.98334 12.4083 9.075 12.125 9.075C11.8417 9.075 11.6083 8.98334 11.425 8.8L9.325 6.7C9.225 6.6 9.15417 6.49167 9.1125 6.375C9.07083 6.25834 9.05 6.13334 9.05 6C9.05 5.86667 9.07083 5.74167 9.1125 5.625C9.15417 5.50834 9.225 5.4 9.325 5.3L11.425 3.2C11.6083 3.01667 11.8417 2.925 12.125 2.925C12.4083 2.925 12.6417 3.01667 12.825 3.2C13.0083 3.38334 13.1 3.61667 13.1 3.9C13.1 4.18334 13.0083 4.41667 12.825 4.6L12.425 5H12.5C14.7333 5 16.625 5.775 18.175 7.325C19.725 8.875 20.5 10.7667 20.5 13C20.5 14.8167 19.9583 16.4333 18.875 17.85C17.7917 19.2667 16.3917 20.2167 14.675 20.7Z" fill="black"/>
+                    </g>
+                </svg>
+
+            </button>
+
+             <button id="prev" class="bg-zinc-100 w-10 h-10 rounded-full flex flex-col justify-center items-center" disabled>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_349_2322" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                    <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_349_2322)">
+                    <path d="M6 17V7C6 6.71667 6.09583 6.47917 6.2875 6.2875C6.47917 6.09583 6.71667 6 7 6C7.28333 6 7.52083 6.09583 7.7125 6.2875C7.90417 6.47917 8 6.71667 8 7V17C8 17.2833 7.90417 17.5208 7.7125 17.7125C7.52083 17.9042 7.28333 18 7 18C6.71667 18 6.47917 17.9042 6.2875 17.7125C6.09583 17.5208 6 17.2833 6 17ZM17.45 16.975L11.25 12.825C11.1 12.725 10.9875 12.6042 10.9125 12.4625C10.8375 12.3208 10.8 12.1667 10.8 12C10.8 11.8333 10.8375 11.6792 10.9125 11.5375C10.9875 11.3958 11.1 11.275 11.25 11.175L17.45 7.025C17.5333 6.95833 17.625 6.91667 17.725 6.9C17.825 6.88333 17.9167 6.875 18 6.875C18.2667 6.875 18.5 6.96667 18.7 7.15C18.9 7.33333 19 7.575 19 7.875V16.125C19 16.425 18.9 16.6667 18.7 16.85C18.5 17.0333 18.2667 17.125 18 17.125C17.9167 17.125 17.825 17.1167 17.725 17.1C17.625 17.0833 17.5333 17.0417 17.45 16.975Z" fill="#1C1B1F"/>
+                    </g>
+                </svg>
+            </button>
+
+            <button id="toggleTimer" class="bg-zinc-900 w-16 h-16 rounded-full flex flex-col justify-center items-center">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" id="toggleTimerPlay">
+                    <mask id="mask0_338_2228" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+                        <rect width="40" height="40" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_338_2228)">
+                        <path d="M13.3333 29.25V10.5C13.3333 10.1111 13.4583 9.80556 13.7083 9.58333C13.9583 9.36111 14.2499 9.25 14.5833 9.25C14.6944 9.25 14.8055 9.26389 14.9166 9.29167C15.0277 9.31944 15.1388 9.36111 15.2499 9.41667L29.9999 18.8333C30.1944 18.9722 30.3402 19.125 30.4374 19.2917C30.5346 19.4583 30.5833 19.6528 30.5833 19.875C30.5833 20.0972 30.5346 20.2917 30.4374 20.4583C30.3402 20.625 30.1944 20.7778 29.9999 20.9167L15.2499 30.3333C15.1388 30.3889 15.0277 30.4306 14.9166 30.4583C14.8055 30.4861 14.6944 30.5 14.5833 30.5C14.2499 30.5 13.9583 30.3889 13.7083 30.1667C13.4583 29.9444 13.3333 29.6389 13.3333 29.25Z" fill="white"/>
+                    </g>
+                </svg>
+                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg" id="toggleTimerPause" class="hidden">
+                    <mask id="mask0_338_2217" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="40">
+                        <rect x="0.5" width="40" height="40" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_338_2217)">
+                        <path d="M26.1249 31.6667C25.4374 31.6667 24.8489 31.4218 24.3595 30.9321C23.8698 30.4426 23.6249 29.8542 23.6249 29.1667V10.8333C23.6249 10.1458 23.8698 9.55722 24.3595 9.06749C24.8489 8.57805 25.4374 8.33333 26.1249 8.33333H28.4166C29.1041 8.33333 29.6927 8.57805 30.1824 9.06749C30.6719 9.55722 30.9166 10.1458 30.9166 10.8333V29.1667C30.9166 29.8542 30.6719 30.4426 30.1824 30.9321C29.6927 31.4218 29.1041 31.6667 28.4166 31.6667H26.1249ZM12.5833 31.6667C11.8958 31.6667 11.3073 31.4218 10.8178 30.9321C10.3281 30.4426 10.0833 29.8542 10.0833 29.1667V10.8333C10.0833 10.1458 10.3281 9.55722 10.8178 9.06749C11.3073 8.57805 11.8958 8.33333 12.5833 8.33333H14.8749C15.5624 8.33333 16.151 8.57805 16.6408 9.06749C17.1302 9.55722 17.3749 10.1458 17.3749 10.8333V29.1667C17.3749 29.8542 17.1302 30.4426 16.6408 30.9321C16.151 31.4218 15.5624 31.6667 14.8749 31.6667H12.5833Z" fill="white"/>
+                    </g>
+                </svg>
+            </button>
+
+            <button id="next" class="bg-zinc-100 w-10 h-10 rounded-full flex flex-col justify-center items-center">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_296_1526" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                        <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_296_1526)">
+                        <path d="M17 17V7C17 6.71667 17.0958 6.47917 17.2875 6.2875C17.4792 6.09583 17.7167 6 18 6C18.2833 6 18.5208 6.09583 18.7125 6.2875C18.9042 6.47917 19 6.71667 19 7V17C19 17.2833 18.9042 17.5208 18.7125 17.7125C18.5208 17.9042 18.2833 18 18 18C17.7167 18 17.4792 17.9042 17.2875 17.7125C17.0958 17.5208 17 17.2833 17 17ZM6 16.125V7.875C6 7.575 6.1 7.33333 6.3 7.15C6.5 6.96667 6.73333 6.875 7 6.875C7.08333 6.875 7.175 6.88333 7.275 6.9C7.375 6.91667 7.46667 6.95833 7.55 7.025L13.75 11.175C13.9 11.275 14.0125 11.3958 14.0875 11.5375C14.1625 11.6792 14.2 11.8333 14.2 12C14.2 12.1667 14.1625 12.3208 14.0875 12.4625C14.0125 12.6042 13.9 12.725 13.75 12.825L7.55 16.975C7.46667 17.0417 7.375 17.0833 7.275 17.1C7.175 17.1167 7.08333 17.125 7 17.125C6.73333 17.125 6.5 17.0333 6.3 16.85C6.1 16.6667 6 16.425 6 16.125Z" fill="#1C1B1F"/>
+                        </g>
+                </svg>
+
+            </button>
+
+            <button id="sound" class="bg-white w-10 h-10 rounded-full flex flex-col justify-center items-center">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_349_2332" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                    <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_349_2332)">
+                    <path d="M17.275 19.575C17.0916 19.6917 16.9083 19.8 16.725 19.9C16.5416 20 16.35 20.0917 16.15 20.175C15.9 20.2917 15.6458 20.2917 15.3875 20.175C15.1291 20.0583 14.95 19.8667 14.85 19.6C14.75 19.35 14.7625 19.1042 14.8875 18.8625C15.0125 18.6208 15.2 18.4417 15.45 18.325C15.5666 18.275 15.675 18.2208 15.775 18.1625C15.875 18.1042 15.975 18.0417 16.075 17.975L12.5 14.8V17.575C12.5 18.025 12.2958 18.3375 11.8875 18.5125C11.4791 18.6875 11.1166 18.6167 10.8 18.3L7.49995 15H4.49995C4.21662 15 3.97912 14.9042 3.78745 14.7125C3.59578 14.5208 3.49995 14.2833 3.49995 14V10C3.49995 9.71667 3.59578 9.47917 3.78745 9.28751C3.97912 9.09584 4.21662 9.00001 4.49995 9.00001H6.69995L2.59995 4.90001C2.41662 4.71667 2.32495 4.48334 2.32495 4.20001C2.32495 3.91667 2.41662 3.68334 2.59995 3.50001C2.78328 3.31667 3.01662 3.22501 3.29995 3.22501C3.58328 3.22501 3.81662 3.31667 3.99995 3.50001L21 20.5C21.1833 20.6833 21.275 20.9167 21.275 21.2C21.275 21.4833 21.1833 21.7167 21 21.9C20.8166 22.0833 20.5833 22.175 20.3 22.175C20.0166 22.175 19.7833 22.0833 19.6 21.9L17.275 19.575ZM19.5 11.975C19.5 10.5917 19.1333 9.32917 18.4 8.18751C17.6666 7.04584 16.6833 6.19167 15.45 5.62501C15.2 5.50834 15.0166 5.32917 14.9 5.08751C14.7833 4.84584 14.7666 4.60001 14.85 4.35001C14.95 4.08334 15.1291 3.89167 15.3875 3.77501C15.6458 3.65834 15.9083 3.65834 16.175 3.77501C17.7916 4.49167 19.0833 5.58334 20.05 7.05001C21.0166 8.51667 21.5 10.1583 21.5 11.975C21.5 12.525 21.45 13.0708 21.35 13.6125C21.25 14.1542 21.1083 14.675 20.925 15.175C20.7916 15.5417 20.5875 15.7708 20.3125 15.8625C20.0375 15.9542 19.7833 15.9583 19.55 15.875C19.3166 15.7917 19.1291 15.6417 18.9875 15.425C18.8458 15.2083 18.8416 14.9583 18.975 14.675C19.1583 14.2417 19.2916 13.8042 19.375 13.3625C19.4583 12.9208 19.5 12.4583 19.5 11.975ZM15.275 8.42501C15.825 8.77501 16.25 9.30001 16.55 10C16.85 10.7 17 11.3667 17 12V12.25C17 12.3333 16.9916 12.4167 16.975 12.5C16.9416 12.7167 16.825 12.8583 16.625 12.925C16.425 12.9917 16.2416 12.9417 16.075 12.775L14.8 11.5C14.7 11.4 14.625 11.2875 14.575 11.1625C14.525 11.0375 14.5 10.9083 14.5 10.775V8.85001C14.5 8.65001 14.5875 8.50417 14.7625 8.41251C14.9375 8.32084 15.1083 8.32501 15.275 8.42501ZM10.25 6.95001C10.15 6.85001 10.1 6.73334 10.1 6.60001C10.1 6.46667 10.15 6.35001 10.25 6.25001L10.8 5.70001C11.1166 5.38334 11.4791 5.31251 11.8875 5.48751C12.2958 5.66251 12.5 5.97501 12.5 6.42501V8.00001C12.5 8.23334 12.4 8.39167 12.2 8.47501C12 8.55834 11.8166 8.51667 11.65 8.35001L10.25 6.95001Z" fill="#1C1B1F"/>
+                    </g>
+                </svg>
+
+            </button>
+
+
+
+        </div>
+
+        <div class="text-sm font-semibold text-center px-10 pb-5" id="next-duration">5-min break ahead</div>
+
+
+    </div>
+</div>
+
+
+
+        <script src="/js/grindflow.js"></script>
+    </body>
+</html>

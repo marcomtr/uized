@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
     });
     eleventyConfig.addPassthroughCopy("assets/**/*.{svg,png}");
     eleventyConfig.addPassthroughCopy("js/aspect-ratio-calculator.js");
+    eleventyConfig.addPassthroughCopy("js/grindflow.js");
     eleventyConfig.addPassthroughCopy("js/app.js");
     eleventyConfig.addPassthroughCopy("robots.txt");
     eleventyConfig.addPassthroughCopy(".htaccess");

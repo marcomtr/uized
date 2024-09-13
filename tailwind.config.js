@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    './grindflow/*.njk',
     './aspect-ratio-calculator/*.njk',
     './_includes/*.njk',
     './_includes/components/*.njk',
